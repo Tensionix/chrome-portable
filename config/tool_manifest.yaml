@@ -1,0 +1,651 @@
+tool:
+  id: audion_chrome_portable
+  name: "Audion Chrome Portable"
+  category: "Browsers"
+  version: "1.0.0"
+
+paths:
+  input: "input"
+  output: "output"
+  logs: "logs"
+  report: "report"
+  workspace: "workspace"
+  config: "config"
+  release: "release"
+
+ui:
+  title: "Audion Chrome Portable"
+  host: "127.0.0.1"
+  port: 8080
+  native: false
+  reload: false
+  open_browser: false
+
+operations:
+  - id: chrome_build
+    title: "Build"
+    title_ru: "Собрать"
+    description: "A folder you can run from anywhere."
+    description_ru: "Папка, которую можно запускать откуда угодно."
+    tooltip: "Downloads the Chrome installer together with the Chrome++ wrapper, unpacks both and publishes a ready build in the Target folder. Nothing is installed into Windows and no administrator rights are needed: the installer is only unpacked, and the profile lives in Data next to the browser, so the whole folder can be copied to a flash drive and carried away."
+    tooltip_ru: "Скачивает установщик Chrome вместе с обёрткой Chrome++, распаковывает оба и публикует готовую сборку в папке назначения. В Windows ничего не устанавливается и права администратора не нужны: установщик только распаковывается, а профиль лежит в папке Data рядом с браузером, поэтому всю папку можно скопировать на флешку и унести с собой."
+    service: "system_core.services.chrome_portable_service:build_portable"
+    kind: "safe"
+
+  - id: chrome_update
+    title: "Update"
+    title_ru: "Обновить"
+    description: "Fresh version, your profile untouched."
+    description_ru: "Свежая версия, ваш профиль на месте."
+    tooltip: "Only the browser itself is replaced, right inside the build the Source points at. Data and Cache are left alone, so bookmarks, passwords and extensions survive the update. Versions are compared first: Google publishes the stable number, so a build that is already current downloads nothing."
+    tooltip_ru: "Меняется только сам браузер, прямо внутри сборки, на которую указывает «Источник». Data и Cache не трогаются, поэтому закладки, пароли и расширения переживают обновление. Сначала сравниваются версии: Google публикует номер стабильной, поэтому свежая сборка ничего не скачивает."
+    service: "system_core.services.chrome_portable_service:update_portable"
+    kind: "safe"
+
+  - id: chrome_check
+    title: "Check"
+    title_ru: "Проверить"
+    description: "What is published, and what you already have."
+    description_ru: "Что вышло и что уже стоит."
+    tooltip: "Shows the version Google publishes today next to the version of the build on disk, so you can see whether an update is worth running at all. It reads the version history and the release page only, and downloads nothing."
+    tooltip_ru: "Показывает версию, которую Google выложил сегодня, рядом с версией сборки на диске - видно, стоит ли вообще запускать обновление. Читает только историю версий и страницу выпуска, ничего не скачивает."
+    service: "system_core.services.chrome_portable_service:check_updates"
+    kind: "safe"
+
+  - id: chrome_plus_update
+    title: "Chrome++"
+    title_ru: "Chrome++"
+    description: "Refresh the wrapper alone."
+    description_ru: "Обновить одну обёртку."
+    tooltip: "Chrome++ is the wrapper that keeps the profile next to the browser and makes the build portable. It is released more often than Chrome itself, so it can be refreshed on its own: only `version.dll` and `chrome++.ini` are replaced, and the browser and the profile are left untouched."
+    tooltip_ru: "Chrome++ - обёртка, которая держит профиль рядом с браузером и делает сборку портативной. Выходит она чаще самого Chrome, поэтому её можно обновить отдельно: меняются только `version.dll` и `chrome++.ini`, браузер и профиль остаются нетронутыми."
+    service: "system_core.services.chrome_portable_service:update_chrome_plus"
+    kind: "safe"
+
+  - id: certificates_state
+    title: "Certificates: check"
+    title_ru: "Сертификаты: проверить"
+    description: "Does this computer trust state sites."
+    description_ru: "Доверяет ли компьютер госсайтам."
+    tooltip: "Russian state sites are signed by the Ministry of Digital Development authority, which Windows does not trust out of the box - such a site opens with a security warning. This reports whether the two certificates are already in place for your account, looking them up by fingerprint. It reads the certificate stores and changes nothing."
+    tooltip_ru: "Российские госсайты подписаны удостоверяющим центром Минцифры, которому Windows по умолчанию не доверяет, - такой сайт открывается с предупреждением о безопасности. Здесь видно, стоят ли уже оба сертификата у вашей учётной записи: они ищутся по отпечатку. Только читает хранилища сертификатов, ничего не меняет."
+    service: "system_core.services.chrome_portable_service:certificates_state"
+    kind: "safe"
+
+  - id: certificates_stage
+    title: "Certificates: into build"
+    title_ru: "Сертификаты: в сборку"
+    description: "Put the certificates into the build."
+    description_ru: "Положить сертификаты в сборку."
+    tooltip: "Downloads both certificate files into the build and writes two shortcuts next to them - install and revoke. The files alone change nothing: state sites keep warning until someone runs the install shortcut on that computer. Without a build in Source the files go to output\\Certificates."
+    tooltip_ru: "Скачивает в сборку оба файла сертификатов и кладёт рядом два ярлыка - установить и отозвать. Сами файлы ничего не меняют: госсайты будут предупреждать, пока на том компьютере не запустят ярлык установки. Если сборки в «Источнике» нет, файлы лягут в output\\Certificates."
+    service: "system_core.services.chrome_portable_service:stage_certificates_operation"
+    kind: "safe"
+
+  - id: certificates_install
+    title: "Certificates: install"
+    title_ru: "Сертификаты: установить"
+    description: "Open state sites without a warning."
+    description_ru: "Открывать госсайты без предупреждения."
+    tooltip: "Adds the two Russian Trusted CA certificates - the root one and the one under it - to your own account in Windows, not to the whole machine. No administrator rights are needed and other accounts stay as they were. The trust is account-wide rather than per browser: every Chromium browser here, portable or installed, stops warning about state sites afterwards. The revoke command puts everything back."
+    tooltip_ru: "Добавляет два сертификата НУЦ Минцифры - корневой и подчинённый - вашей учётной записи Windows, а не всему компьютеру. Права администратора не нужны, другие учётные записи остаются как были. Доверие ставится на учётную запись, а не на отдельный браузер: после этого все браузеры на Chromium - и портативные, и установленные - перестают предупреждать о госсайтах. Команда отзыва возвращает всё назад."
+    service: "system_core.services.chrome_portable_service:install_certificates"
+    kind: "dangerous"
+
+  - id: certificates_remove
+    title: "Certificates: revoke"
+    title_ru: "Сертификаты: отозвать"
+    description: "Take that trust back."
+    description_ru: "Забрать это доверие обратно."
+    tooltip: "Removes exactly the two certificates this program installs and nothing else: they are found by their fingerprint, which is fixed in the program, so a certificate someone else put there stays where it is. State sites will warn again afterwards, and the install command can be run any time."
+    tooltip_ru: "Удаляет ровно те два сертификата, которые ставит эта программа, и больше ничего: они ищутся по отпечатку, зашитому в программу, поэтому чужой сертификат останется на месте. После этого госсайты снова будут предупреждать, а установку можно повторить в любой момент."
+    service: "system_core.services.chrome_portable_service:remove_certificates"
+    kind: "dangerous"
+
+  - id: install_7zip
+    title: "7-Zip"
+    title_ru: "7-Zip"
+    description: "The unpacker every build needs."
+    description_ru: "Распаковщик, без которого не собрать."
+    tooltip: "Chrome is never installed here - its installer is unpacked instead, twice, and that is what 7-Zip does. This checks for `tools\\7zip\\bin\\7za.exe` and, when it is missing, downloads a portable copy into the project folder. Nothing is installed into Windows, and the copy is deleted by the project cleanup because it ages quickly."
+    tooltip_ru: "Chrome здесь не устанавливается - вместо этого его установщик распаковывается, причём дважды, и делает это 7-Zip. Проверяет `tools\\7zip\\bin\\7za.exe` и, если его нет, кладёт портативную копию в папку проекта. В Windows ничего не устанавливается, а копия удаляется чисткой проекта, потому что быстро устаревает."
+    service: "system_core.services.chrome_portable_service:install_portable_7zip"
+    kind: "safe"
+
+  - id: defender_exclusion_remove
+    title: "Defender: remove exclusion"
+    title_ru: "Defender: убрать исключение"
+    description: "Take back the temporary build exclusion."
+    description_ru: "Забрать временное исключение сборки."
+    tooltip: "A build normally excludes its output folder from Windows Defender only while it runs and removes the exclusion the moment it finishes. This is the safety net for the rare case where a build was killed hard and the exclusion was left behind: it removes exactly that output-folder exclusion. Windows asks for UAC. It reads nothing else and changes no other Defender setting; removing an exclusion that is not there is not an error."
+    tooltip_ru: "Сборка обычно исключает свою папку output из Windows Defender только на время работы и снимает исключение сразу после. Это подстраховка на редкий случай, когда сборку убили жёстко и исключение осталось: снимается ровно оно, для папки output. Windows спросит UAC. Больше ничего не читается и никакие другие настройки Defender не трогаются; снять исключение, которого нет, - не ошибка."
+    service: "system_core.services.chrome_portable_service:defender_exclusion_remove"
+    kind: "dangerous"
+
+operation_groups:
+  - id: install
+    title: "Install"
+    title_ru: "Установка"
+    description: "A new build, taken from the Target folder."
+    description_ru: "Новая сборка, забрать из папки назначения."
+    tooltip: "The installer is unpacked rather than run, so nothing reaches Windows and no administrator rights are needed. The finished folder appears in the Target folder, ready to be copied onto a flash drive or handed over as it is."
+    tooltip_ru: "Установщик распаковывается, а не запускается: в Windows ничего не попадает, права администратора не нужны. Готовая папка появляется в папке назначения - её можно скопировать на флешку или отдать как есть."
+    children:
+      - id: chrome_build
+        title: "Build"
+        title_ru: "Собрать"
+        description: "A folder you can run from anywhere."
+        description_ru: "Папка, которую можно запускать откуда угодно."
+        tooltip: "Downloads the browser and its wrapper and publishes a ready build into the Target folder: about 120 MB of download, roughly 350 MB once unpacked. The installer is only unpacked, so nothing is installed into Windows."
+        tooltip_ru: "Скачивает браузер и обёртку и кладёт готовую сборку в папку назначения: около 120 МБ загрузки и примерно 350 МБ в распакованном виде. Установщик только распаковывается, поэтому в Windows ничего не устанавливается."
+        service: "system_core.services.chrome_portable_service:build_portable"
+        kind: "safe"
+        fields:
+          - id: stage_certificates
+            type: "checkbox"
+            group: "options"
+            label: "State site certificates"
+            label_ru: "Сертификаты госсайтов"
+            default: false
+            hint: "Files and two shortcuts, nothing more."
+            hint_ru: "Файлы и два ярлыка, не более."
+            tooltip: "Russian state sites are signed by the Ministry of Digital Development authority, which Windows does not trust out of the box, so such a site opens with a security warning. This puts the two certificate files into the build together with two shortcuts - install and revoke. The files alone change nothing: the warning goes away only after someone runs the install shortcut on that computer, and the revoke shortcut takes the trust back."
+            tooltip_ru: "Российские госсайты подписаны удостоверяющим центром Минцифры, которому Windows по умолчанию не доверяет, поэтому такой сайт открывается с предупреждением о безопасности. Здесь в сборку кладутся два файла сертификатов и два ярлыка - установить и отозвать. Сами файлы ничего не меняют: предупреждение исчезнет только после того, как на том компьютере запустят ярлык установки, а ярлык отзыва вернёт доверие назад."
+
+          - id: portable_engine
+            type: "radio"
+            group: "format"
+            label: "Portability"
+            label_ru: "Портативность"
+            default: "chrome_plus"
+            hint: "Which library sits beside the browser."
+            hint_ru: "Какая библиотека лежит рядом с браузером."
+            tooltip: "What keeps the profile inside the build folder. Chrome++ is the wrapper this program started with, widely used and well known - and well known to antivirus heuristics too, which regularly take its `version.dll` for a threat. The proxy library is another `version.dll`, by neyrostalker: it does the same job, blocks writes to the registry outright instead of wiping them afterwards, and Microsoft does not flag it."
+            tooltip_ru: "Чем профиль удерживается внутри папки сборки. Chrome++ - обёртка, с которой эта программа начиналась: распространённая и известная, в том числе эвристикам антивирусов, которые регулярно принимают её `version.dll` за угрозу. Прокси библиотека - другая `version.dll`, авторства neyrostalker: делает ту же работу, запись в реестр не подчищает, а сразу блокирует, и Microsoft на неё не ругается."
+            options:
+              - value: "chrome_plus"
+                label: "Chrome++"
+                label_ru: "Chrome++"
+              - value: "proxy_library"
+                label: "Proxy library"
+                label_ru: "Прокси библиотека"
+
+          - id: chrome_plus_arch
+            type: "radio"
+            group: "format"
+            label: "Wrapper architecture"
+            label_ru: "Разрядность обёртки"
+            default: "x64"
+            hint: "The Chrome installer is x64."
+            hint_ru: "Установщик Chrome - x64."
+            tooltip: "Chrome++ is the small wrapper that makes the build portable: it keeps the profile next to the browser instead of in Windows. It has to match the browser, and the standalone installer Google publishes is x64. A mismatch produces no error message - the wrapper is simply ignored, and the build quietly stops being portable, writing its profile into Windows instead."
+            tooltip_ru: "Chrome++ - маленькая обёртка, которая делает сборку портативной: держит профиль рядом с браузером, а не в Windows. Она должна совпадать с браузером, а standalone-установщик, который выкладывает Google, - x64. При несовпадении ошибки не будет: обёртка просто не загрузится, и сборка молча перестанет быть портативной - профиль уйдёт в Windows."
+            options:
+              - value: "x64"
+                label: "x64"
+                label_ru: "x64"
+              - value: "x86"
+                label: "x86"
+                label_ru: "x86"
+              - value: "arm64"
+                label: "ARM64"
+                label_ru: "ARM64"
+
+          - id: wipe_registry_on_exit
+            type: "checkbox"
+            group: "options"
+            label: "Leave no traces in Windows"
+            label_ru: "Не оставлять следов в Windows"
+            default: false
+            hint: "Only where Chrome is not installed."
+            hint_ru: "Только там, где Chrome не установлен."
+            tooltip: "A portable build still leaves counters and small settings in its own branch of the Windows registry. With this on, Chrome wipes that branch when it exits, so the computer is left as it was found. The catch: the branch is shared with an installed Chrome, and wiping it takes the installed copy's settings along. Use it on machines where Chrome is not installed."
+            tooltip_ru: "Портативная сборка всё равно оставляет счётчики и мелкие настройки в своей ветке реестра Windows. С этой галкой Chrome стирает ветку при выходе, и компьютер остаётся таким, каким был. Подвох: ветка общая с установленным Chrome, и вместе с ней пропадут его настройки. Включайте на машинах, где Chrome не установлен."
+
+          - id: guard_defender
+            type: "checkbox"
+            group: "options"
+            label: "Work around Defender while building"
+            label_ru: "Обойти Defender на время сборки"
+            default: true
+            hint: "Only when Defender is running."
+            hint_ru: "Только когда Defender включён."
+            tooltip: "Chrome++'s version.dll is a routine Windows Defender false positive: real-time protection can grab it mid-build, and the packaging step then dies with an unhelpful error. With this on, the output folder is excluded from Defender only for the length of the build and put back the moment it finishes - Windows asks for UAC once, and the exclusion is removed even if the build fails. It is a no-op where Defender is not running, so it never asks for anything on such machines. This changes nothing for whoever receives the build: their Defender may still flag version.dll, which is fixed by submitting it to Microsoft as a false positive."
+            tooltip_ru: "version.dll от Chrome++ - обычное ложное срабатывание Windows Defender: защита в реальном времени может забрать файл посреди сборки, и тогда упаковка падает с невнятной ошибкой. С этой галкой папка output исключается из Defender только на время сборки и возвращается сразу после - Windows один раз спросит UAC, а исключение снимается даже если сборка не удалась. Там, где Defender не запущен, галка ничего не делает и ничего не спрашивает. На получателя сборки это не влияет: у него Defender всё ещё может ругаться на version.dll - это лечится отправкой файла в Microsoft как ложного срабатывания."
+
+          - id: package_archive
+            type: "checkbox"
+            group: "output"
+            label: "Pack into an archive"
+            label_ru: "Упаковать в архив"
+            default: false
+            hint: "One file instead of a folder."
+            hint_ru: "Один файл вместо папки."
+            tooltip: "Off publishes a ready-to-run folder: open it and start the browser. On packs the build into an archive instead - a single file, easier to put on a flash drive, upload or send to a colleague, who unpacks it and runs it exactly the same way."
+            tooltip_ru: "Выключено - публикуется готовая папка: открыл и запустил браузер. Включено - сборка пакуется в архив: один файл, его проще положить на флешку, выложить или отправить коллеге, а тот распакует и запустит точно так же."
+
+          - id: archive_format
+            type: "radio"
+            group: "output"
+            label: "Archive format"
+            label_ru: "Формат архива"
+            default: "zip"
+            hint: "ZIP anywhere, 7Z smaller."
+            hint_ru: "ZIP везде, 7Z меньше."
+            tooltip: "ZIP opens on any Windows computer with no extra program at all, which matters when the build goes to someone else. 7Z packs the browser noticeably smaller - useful for a slow upload - but whoever receives it has to have 7-Zip installed."
+            tooltip_ru: "ZIP открывается на любом компьютере с Windows вообще без лишних программ - это важно, когда сборка уезжает к другому человеку. 7Z ужимает браузер заметно сильнее, что полезно при медленной выгрузке, но у получателя должен быть установлен 7-Zip."
+            options:
+              - value: "zip"
+                label: "ZIP"
+                label_ru: "ZIP"
+              - value: "7z"
+                label: "7Z"
+                label_ru: "7Z"
+
+          - id: chrome_download_url
+            type: "text"
+            section: "advanced"
+            group: "source"
+            label: "Chrome download URL"
+            label_ru: "Ссылка загрузки Chrome"
+            default: "https://dl.google.com/chrome/install/ChromeStandaloneSetup64.exe"
+            hint: "Leave it as it is."
+            hint_ru: "Не трогайте."
+            tooltip: "The direct address of the standalone installer that carries the browser inside. The program reads the published version from it and downloads the payload it unpacks. Change it only if Google moves the file - a wrong address means either an error or, worse, a build made from something else."
+            tooltip_ru: "Прямой адрес standalone-установщика, внутри которого лежит браузер. Программа читает по нему опубликованную версию и качает то, что потом распаковывает. Меняйте, только если Google перенёс файл: неверный адрес - это или ошибка, или, что хуже, сборка из чего-то постороннего."
+
+          - id: keep_temp
+            type: "checkbox"
+            section: "advanced"
+            group: "run"
+            label: "Keep working files"
+            label_ru: "Оставить рабочие файлы"
+            default: false
+            hint: "For finding out what went wrong."
+            hint_ru: "Чтобы разобраться, что пошло не так."
+            tooltip: "The download and the unpacked installer normally disappear from the workspace folder as soon as the build is published, because they are large. Keep them when a build failed and the reason has to be found: the half-finished result is then still on disk and can be looked at."
+            tooltip_ru: "Загрузка и распакованный установщик обычно исчезают из папки workspace сразу после публикации сборки - они большие. Оставьте их, если сборка не удалась и нужно понять причину: тогда недоделанный результат останется на диске, и его можно будет посмотреть."
+
+  - id: update
+    title: "Update"
+    title_ru: "Обновление"
+    description: "Update the build in place."
+    description_ru: "Обновить сборку на её месте."
+    tooltip: "Point Source at the folder with the build - the flash drive, the network share, wherever it lives - and it is updated right there. Only the browser is replaced; the profile with bookmarks, passwords and extensions stays untouched."
+    tooltip_ru: "Укажите в «Источнике» папку со сборкой - на флешке, в сетевой папке, где угодно, - и она обновится прямо там. Меняется только браузер, профиль с закладками, паролями и расширениями остаётся нетронутым."
+    children:
+      - id: chrome_check
+        title: "Check"
+        title_ru: "Проверить"
+        description: "Is there anything to update."
+        description_ru: "Есть ли что обновлять."
+        tooltip: "Compares the version published today with the one in the build and downloads nothing. Google publishes the stable number as data, so the check costs one small request; the Chrome++ release is looked up the same way."
+        tooltip_ru: "Сравнивает версию, выложенную сегодня, с версией сборки и ничего не скачивает. Google публикует номер стабильной версии данными, поэтому проверка стоит одного небольшого запроса; выпуск Chrome++ смотрится так же."
+        service: "system_core.services.chrome_portable_service:check_updates"
+        kind: "safe"
+        fields:
+          - id: portable_engine
+            type: "radio"
+            group: "format"
+            label: "Portability"
+            label_ru: "Портативность"
+            default: "chrome_plus"
+            hint: "Which wrapper to compare against."
+            hint_ru: "С какой обёрткой сверять."
+            tooltip: "The check compares two numbers: the browser's own version and the version of the library beside it. Pick the wrapper the build carries."
+            tooltip_ru: "Проверка сравнивает два числа: версию самого браузера и версию библиотеки рядом с ним. Выберите ту обёртку, которая лежит в сборке."
+            options:
+              - value: "chrome_plus"
+                label: "Chrome++"
+                label_ru: "Chrome++"
+              - value: "proxy_library"
+                label: "Proxy library"
+                label_ru: "Прокси библиотека"
+
+
+      - id: chrome_update
+        title: "Update"
+        title_ru: "Обновить"
+        description: "Fresh version, your profile untouched."
+        description_ru: "Свежая версия, ваш профиль на месте."
+        tooltip: "Replaces the browser inside the build and leaves the profile alone, so bookmarks, passwords and extensions stay. A build that already carries the published version stops without downloading anything - use `Rebuild without a new version` when it has to be replaced regardless."
+        tooltip_ru: "Меняет в сборке браузер, не трогая профиль: закладки, пароли и расширения остаются. Сборка с уже опубликованной версией останавливается, ничего не скачивая, - если её всё равно нужно заменить, включите «Пересобрать без новой версии»."
+        service: "system_core.services.chrome_portable_service:update_portable"
+        kind: "safe"
+        fields:
+          - id: force_update
+            type: "checkbox"
+            group: "run"
+            label: "Rebuild without a new version"
+            label_ru: "Пересобрать без новой версии"
+            default: false
+            hint: "For a damaged build."
+            hint_ru: "Для повреждённой сборки."
+            tooltip: "Normally a build that already carries the published version is skipped and nothing is downloaded. Turn this on for a build whose browser is damaged or was assembled elsewhere: it is then downloaded and replaced regardless of the version. The profile stays untouched either way, so bookmarks and passwords survive the rebuild."
+            tooltip_ru: "Обычно сборка с уже опубликованной версией пропускается и ничего не скачивается. Включите для сборки, у которой браузер повреждён или собран не здесь: тогда он будет скачан и заменён независимо от версии. Профиль в любом случае остаётся нетронутым, так что закладки и пароли переживут пересборку."
+
+          - id: stage_certificates
+            type: "checkbox"
+            group: "options"
+            label: "State site certificates"
+            label_ru: "Сертификаты госсайтов"
+            default: false
+            hint: "Keep them in the build."
+            hint_ru: "Оставить их в сборке."
+            tooltip: "Keeps the two certificate files and their install and revoke shortcuts in the updated build. Off removes them from the build instead. Neither choice touches the browser or the profile, and neither changes what this computer already trusts - that is done by the shortcuts, or by the Certificate section."
+            tooltip_ru: "Оставляет в обновлённой сборке два файла сертификатов и ярлыки установки и отзыва. Выключено - убирает их из сборки. Ни то, ни другое не трогает браузер и профиль и не меняет то, чему уже доверяет этот компьютер: этим занимаются ярлыки или раздел «Сертификат»."
+
+          - id: portable_engine
+            type: "radio"
+            group: "format"
+            label: "Portability"
+            label_ru: "Портативность"
+            default: "chrome_plus"
+            hint: "Which library sits beside the browser."
+            hint_ru: "Какая библиотека лежит рядом с браузером."
+            tooltip: "What keeps the profile inside the build folder. Chrome++ is the wrapper this program started with, widely used and well known - and well known to antivirus heuristics too, which regularly take its `version.dll` for a threat. The proxy library is another `version.dll`, by neyrostalker: it does the same job, blocks writes to the registry outright instead of wiping them afterwards, and Microsoft does not flag it."
+            tooltip_ru: "Чем профиль удерживается внутри папки сборки. Chrome++ - обёртка, с которой эта программа начиналась: распространённая и известная, в том числе эвристикам антивирусов, которые регулярно принимают её `version.dll` за угрозу. Прокси библиотека - другая `version.dll`, авторства neyrostalker: делает ту же работу, запись в реестр не подчищает, а сразу блокирует, и Microsoft на неё не ругается."
+            options:
+              - value: "chrome_plus"
+                label: "Chrome++"
+                label_ru: "Chrome++"
+              - value: "proxy_library"
+                label: "Proxy library"
+                label_ru: "Прокси библиотека"
+
+          - id: chrome_plus_arch
+            type: "radio"
+            group: "format"
+            label: "Wrapper architecture"
+            label_ru: "Разрядность обёртки"
+            default: "x64"
+            hint: "The Chrome installer is x64."
+            hint_ru: "Установщик Chrome - x64."
+            tooltip: "Chrome++ is the small wrapper that makes the build portable: it keeps the profile next to the browser instead of in Windows. It has to match the browser, and the standalone installer Google publishes is x64. A mismatch produces no error message - the wrapper is simply ignored, and the build quietly stops being portable, writing its profile into Windows instead."
+            tooltip_ru: "Chrome++ - маленькая обёртка, которая делает сборку портативной: держит профиль рядом с браузером, а не в Windows. Она должна совпадать с браузером, а standalone-установщик, который выкладывает Google, - x64. При несовпадении ошибки не будет: обёртка просто не загрузится, и сборка молча перестанет быть портативной - профиль уйдёт в Windows."
+            options:
+              - value: "x64"
+                label: "x64"
+                label_ru: "x64"
+              - value: "x86"
+                label: "x86"
+                label_ru: "x86"
+              - value: "arm64"
+                label: "ARM64"
+                label_ru: "ARM64"
+
+          - id: wipe_registry_on_exit
+            type: "checkbox"
+            group: "options"
+            label: "Leave no traces in Windows"
+            label_ru: "Не оставлять следов в Windows"
+            default: false
+            hint: "Only where Chrome is not installed."
+            hint_ru: "Только там, где Chrome не установлен."
+            tooltip: "A portable build still leaves counters and small settings in its own branch of the Windows registry. With this on, Chrome wipes that branch when it exits, so the computer is left as it was found. The catch: the branch is shared with an installed Chrome, and wiping it takes the installed copy's settings along. Use it on machines where Chrome is not installed."
+            tooltip_ru: "Портативная сборка всё равно оставляет счётчики и мелкие настройки в своей ветке реестра Windows. С этой галкой Chrome стирает ветку при выходе, и компьютер остаётся таким, каким был. Подвох: ветка общая с установленным Chrome, и вместе с ней пропадут его настройки. Включайте на машинах, где Chrome не установлен."
+
+          - id: guard_defender
+            type: "checkbox"
+            group: "options"
+            label: "Work around Defender while updating"
+            label_ru: "Обойти Defender на время обновления"
+            default: true
+            hint: "Only when Defender is running."
+            hint_ru: "Только когда Defender включён."
+            tooltip: "Chrome++'s version.dll is a routine Windows Defender false positive: real-time protection can grab it mid-update - both in the workspace and inside the build being updated - and the step then dies with an unhelpful error. With this on, both folders are excluded from Defender only for the length of the update and put back the moment it finishes; Windows asks for UAC once, and the exclusion is removed even if the update fails. It is a no-op where Defender is not running."
+            tooltip_ru: "version.dll от Chrome++ - обычное ложное срабатывание Windows Defender: защита в реальном времени может забрать файл посреди обновления - и во временной папке, и внутри обновляемой сборки, - и тогда шаг падает с невнятной ошибкой. С этой галкой обе папки исключаются из Defender только на время обновления и возвращаются сразу после; Windows один раз спросит UAC, а исключение снимается даже если обновление не удалось. Там, где Defender не запущен, галка ничего не делает."
+
+          - id: package_archive
+            type: "checkbox"
+            group: "output"
+            label: "Pack into an archive"
+            label_ru: "Упаковать в архив"
+            default: false
+            hint: "Plus an archive in the Target folder."
+            hint_ru: "Плюс архив в папке назначения."
+            tooltip: "The updated build is packed into an archive as well and put into the Target folder, ready to hand over. The build itself stays where it was and remains ready to run - the archive is a copy, not a move."
+            tooltip_ru: "Обновлённая сборка дополнительно пакуется в архив и кладётся в папку назначения - можно сразу отдавать. Сама сборка остаётся там же, где была, и по-прежнему готова к запуску: архив - это копия, а не перенос."
+
+          - id: archive_format
+            type: "radio"
+            group: "output"
+            label: "Archive format"
+            label_ru: "Формат архива"
+            default: "zip"
+            hint: "ZIP anywhere, 7Z smaller."
+            hint_ru: "ZIP везде, 7Z меньше."
+            tooltip: "ZIP opens on any Windows computer with no extra program at all, which matters when the build goes to someone else. 7Z packs the browser noticeably smaller - useful for a slow upload - but whoever receives it has to have 7-Zip installed."
+            tooltip_ru: "ZIP открывается на любом компьютере с Windows вообще без лишних программ - это важно, когда сборка уезжает к другому человеку. 7Z ужимает браузер заметно сильнее, что полезно при медленной выгрузке, но у получателя должен быть установлен 7-Zip."
+            options:
+              - value: "zip"
+                label: "ZIP"
+                label_ru: "ZIP"
+              - value: "7z"
+                label: "7Z"
+                label_ru: "7Z"
+
+          - id: chrome_download_url
+            type: "text"
+            section: "advanced"
+            group: "source"
+            label: "Chrome download URL"
+            label_ru: "Ссылка загрузки Chrome"
+            default: "https://dl.google.com/chrome/install/ChromeStandaloneSetup64.exe"
+            hint: "Leave it as it is."
+            hint_ru: "Не трогайте."
+            tooltip: "The direct address of the standalone installer that carries the browser inside. The program reads the published version from it and downloads the payload it unpacks. Change it only if Google moves the file."
+            tooltip_ru: "Прямой адрес standalone-установщика, внутри которого лежит браузер. Программа читает по нему опубликованную версию и качает то, что потом распаковывает. Меняйте, только если Google перенёс файл."
+
+          - id: keep_temp
+            type: "checkbox"
+            section: "advanced"
+            group: "run"
+            label: "Keep working files"
+            label_ru: "Оставить рабочие файлы"
+            default: false
+            hint: "For finding out what went wrong."
+            hint_ru: "Чтобы разобраться, что пошло не так."
+            tooltip: "The download and the unpacked installer normally disappear from the workspace folder as soon as the build is published, because they are large. Keep them when a build failed and the reason has to be found: the half-finished result is then still on disk and can be looked at."
+            tooltip_ru: "Загрузка и распакованный установщик обычно исчезают из папки workspace сразу после публикации сборки - они большие. Оставьте их, если сборка не удалась и нужно понять причину: тогда недоделанный результат останется на диске, и его можно будет посмотреть."
+
+      - id: chrome_plus_update
+        title: "Chrome++"
+        title_ru: "Chrome++"
+        description: "Refresh the wrapper alone."
+        description_ru: "Обновить одну обёртку."
+        tooltip: "Replaces `version.dll` and `chrome++.ini` in the build and leaves the browser and the profile untouched. The wrapper is taken from its latest release - the API first, the release page when the API has no quota left."
+        tooltip_ru: "Меняет в сборке `version.dll` и `chrome++.ini`, не трогая браузер и профиль. Обёртка берётся из последнего выпуска: сначала API, при исчерпанной квоте - страница выпуска."
+        service: "system_core.services.chrome_portable_service:update_chrome_plus"
+        kind: "safe"
+        fields:
+          - id: chrome_plus_arch
+            type: "radio"
+            group: "format"
+            label: "Wrapper architecture"
+            label_ru: "Разрядность обёртки"
+            default: "x64"
+            hint: "The Chrome installer is x64."
+            hint_ru: "Установщик Chrome - x64."
+            tooltip: "The wrapper has to match the browser it sits next to, and the standalone installer Google publishes is x64. A mismatch produces no error message - the wrapper is simply ignored, and the build quietly stops being portable."
+            tooltip_ru: "Обёртка должна совпадать с браузером, рядом с которым лежит, а standalone-установщик, который выкладывает Google, - x64. При несовпадении ошибки не будет: обёртка просто не загрузится, и сборка молча перестанет быть портативной."
+            options:
+              - value: "x64"
+                label: "x64"
+                label_ru: "x64"
+              - value: "x86"
+                label: "x86"
+                label_ru: "x86"
+              - value: "arm64"
+                label: "ARM64"
+                label_ru: "ARM64"
+
+          - id: wipe_registry_on_exit
+            type: "checkbox"
+            group: "options"
+            label: "Leave no traces in Windows"
+            label_ru: "Не оставлять следов в Windows"
+            default: false
+            hint: "Only where Chrome is not installed."
+            hint_ru: "Только там, где Chrome не установлен."
+            tooltip: "The setting is written into the wrapper's own configuration: on exit Chrome wipes its branch of the Windows registry, leaving the computer as it was found. That branch is shared with an installed Chrome, so use it on machines where Chrome is not installed."
+            tooltip_ru: "Настройка пишется в конфигурацию самой обёртки: при выходе Chrome стирает свою ветку реестра Windows, оставляя компьютер таким, каким его нашли. Эта ветка общая с установленным Chrome, поэтому включайте на машинах, где Chrome не установлен."
+
+          - id: guard_defender
+            type: "checkbox"
+            group: "options"
+            label: "Work around Defender while updating"
+            label_ru: "Обойти Defender на время обновления"
+            default: true
+            hint: "Only when Defender is running."
+            hint_ru: "Только когда Defender включён."
+            tooltip: "Chrome++'s version.dll is a routine Windows Defender false positive: real-time protection can grab it mid-update - both in the workspace and inside the build being updated - and the step then dies with an unhelpful error. With this on, both folders are excluded from Defender only for the length of the update and put back the moment it finishes; Windows asks for UAC once, and the exclusion is removed even if the update fails. It is a no-op where Defender is not running."
+            tooltip_ru: "version.dll от Chrome++ - обычное ложное срабатывание Windows Defender: защита в реальном времени может забрать файл посреди обновления - и во временной папке, и внутри обновляемой сборки, - и тогда шаг падает с невнятной ошибкой. С этой галкой обе папки исключаются из Defender только на время обновления и возвращаются сразу после; Windows один раз спросит UAC, а исключение снимается даже если обновление не удалось. Там, где Defender не запущен, галка ничего не делает."
+
+      - id: proxy_library_update
+        title: "Proxy library"
+        title_ru: "Прокси библиотека"
+        description: "Swap the wrapper for the other one."
+        description_ru: "Поменять обёртку на другую."
+        tooltip: "Puts the proxy library's `version.dll` and its `version.ini` into the build, replacing Chrome++ if that is what was there, and leaves the browser and the profile untouched. The release comes from GitFlic, where the library is published with its Delphi sources. This is also the way to move an existing build off Chrome++ when an antivirus keeps taking its wrapper for a threat."
+        tooltip_ru: "Кладёт в сборку `version.dll` прокси библиотеки и её `version.ini`, заменяя Chrome++, если стоял он, и не трогая браузер и профиль. Выпуск берётся с GitFlic, где библиотека опубликована вместе с исходниками на Delphi. Этим же способом переводят готовую сборку с Chrome++, если антивирус упорно принимает его обёртку за угрозу."
+        service: "system_core.services.chrome_portable_service:update_proxy_library"
+        kind: "safe"
+        fields:
+          - id: chrome_plus_arch
+            type: "radio"
+            group: "format"
+            label: "Wrapper architecture"
+            label_ru: "Разрядность обёртки"
+            default: "x64"
+            hint: "The Chrome installer is x64."
+            hint_ru: "Установщик Chrome - x64."
+            tooltip: "The library has to match the browser it sits next to, and the standalone installer Google publishes is x64. The proxy library ships x86 and x64 only - ARM64 is covered by Chrome++ alone."
+            tooltip_ru: "Библиотека должна совпадать по разрядности с браузером, рядом с которым лежит, а standalone-установщик Google - x64. Прокси библиотека выпускается только x86 и x64: ARM64 закрывает лишь Chrome++."
+            options:
+              - value: "x64"
+                label: "x64"
+                label_ru: "x64"
+              - value: "x86"
+                label: "x86"
+                label_ru: "x86"
+
+          - id: wipe_registry_on_exit
+            type: "checkbox"
+            group: "options"
+            label: "Leave no traces in Windows"
+            label_ru: "Не оставлять следов в Windows"
+            default: false
+            hint: "Only where Chrome is not installed."
+            hint_ru: "Только там, где Chrome не установлен."
+            tooltip: "The proxy library does not wipe the registry branch on exit - it blocks the writes outright, so nothing accumulates to be wiped. The cost is that `Set as default browser` stops working, which a portable build has no business doing anyway. The branch is shared with an installed Chrome, so leave this off where one is present."
+            tooltip_ru: "Прокси библиотека не стирает ветку реестра при выходе - она сразу блокирует запись, поэтому копиться нечему. Плата за это - перестаёт работать «Сделать браузером по умолчанию», что портативной сборке и не нужно. Ветка общая с установленным Chrome, поэтому там, где он есть, галку лучше не включать."
+
+          - id: guard_defender
+            type: "checkbox"
+            group: "options"
+            label: "Work around Defender while updating"
+            label_ru: "Обойти Defender на время обновления"
+            default: true
+            hint: "Only when Defender is running."
+            hint_ru: "Только когда Defender включён."
+            tooltip: "Microsoft does not flag the proxy library, but the guard is kept here too: any real-time scanner can grab a freshly written `version.dll` mid-update and the step then dies with an unhelpful error. With this on, the folders are excluded from Defender only for the length of the update and put back the moment it finishes. It is a no-op where Defender is not running."
+            tooltip_ru: "Microsoft на прокси библиотеку не ругается, но защита оставлена и здесь: любой сканер реального времени может забрать только что записанную `version.dll` посреди обновления, и тогда шаг падает с невнятной ошибкой. С этой галкой папки исключаются из Defender только на время обновления и возвращаются сразу после. Там, где Defender не запущен, галка ничего не делает."
+
+
+  - id: certificates
+    title: "Certificate"
+    title_ru: "Сертификат"
+    description: "Trust for Russian state sites."
+    description_ru: "Доверие к российским госсайтам."
+    tooltip: "The certificates go into Windows, into your own account - not into a browser folder, and not into a particular build. Chrome reads the account stores, so no administrator rights are needed and other accounts are untouched. Each step here is separate: put the files into the build, trust them, take that trust back."
+    tooltip_ru: "Сертификаты ставятся в Windows, в вашу учётную запись, - не в папку браузера и не в отдельную сборку. Chrome читает хранилища учётной записи, поэтому права администратора не нужны и другие учётные записи не затрагиваются. Каждый шаг здесь отдельный: положить файлы в сборку, установить доверие, забрать его обратно."
+    children:
+      - id: certificates_state
+        title: "Check"
+        title_ru: "Проверить"
+        description: "Report whether both certificates are trusted for the current user."
+        description_ru: "Показать, доверяет ли текущий пользователь обоим сертификатам."
+        tooltip: "Reads the stores by thumbprint; changes nothing."
+        tooltip_ru: "Читает хранилища по отпечатку; ничего не меняет."
+        service: "system_core.services.chrome_portable_service:certificates_state"
+        kind: "safe"
+
+      - id: certificates_stage
+        title: "Into the build"
+        title_ru: "В сборку"
+        description: "Download both certificates into the build in input and write the two wrappers beside them."
+        description_ru: "Скачать оба сертификата в сборку из input и записать рядом два враппера."
+        tooltip: "Without a build in input the files go to output\\Certificates."
+        tooltip_ru: "Если сборки в input нет, файлы лягут в output\\Certificates."
+        service: "system_core.services.chrome_portable_service:stage_certificates_operation"
+        kind: "safe"
+
+      - id: certificates_install
+        title: "Install"
+        title_ru: "Установить"
+        description: "Add Russian Trusted Root CA to Root and Sub CA to the intermediate store of the current user."
+        description_ru: "Добавить Russian Trusted Root CA в Root, а Sub CA - в промежуточное хранилище текущего пользователя."
+        tooltip: "No administrator rights. Verified by thumbprint after the fact, and undone by the command below."
+        tooltip_ru: "Без прав администратора. Результат проверяется по отпечатку, снимается командой ниже."
+        service: "system_core.services.chrome_portable_service:install_certificates"
+        kind: "dangerous"
+
+      - id: certificates_remove
+        title: "Revoke"
+        title_ru: "Отозвать"
+        description: "Remove exactly these two certificates from the current user's stores, by thumbprint."
+        description_ru: "Удалить ровно эти два сертификата из хранилищ текущего пользователя по отпечатку."
+        tooltip: "Nothing else is touched: the thumbprints are fixed in the program."
+        tooltip_ru: "Больше ничего не трогается: отпечатки зафиксированы в программе."
+        service: "system_core.services.chrome_portable_service:remove_certificates"
+        kind: "dangerous"
+
+  - id: service_procedures
+    title: "Service"
+    title_ru: "Обслуживание"
+    description: "What every build depends on."
+    description_ru: "То, от чего зависит любая сборка."
+    tooltip: "The unpacking tool the program cannot work without. It lives in the project folder, is never installed into Windows, and the project cleanup deletes it because it ages quickly."
+    tooltip_ru: "Распаковщик, без которого программа не работает. Живёт в папке проекта, в Windows не устанавливается, а чистка проекта его удаляет, потому что он быстро устаревает."
+    children:
+      - id: install_7zip
+        title: "7-Zip"
+        title_ru: "7-Zip"
+        description: "The unpacker every build needs."
+        description_ru: "Распаковщик, без которого не собрать."
+        tooltip: "Checks for `tools\\7zip\\bin\\7za.exe` and puts a portable copy into the project folder when it is missing. Without it neither the installer payload nor the browser archive inside it can be opened, so no build can be made."
+        tooltip_ru: "Проверяет `tools\\7zip\\bin\\7za.exe` и, если его нет, кладёт портативную копию в папку проекта. Без него не открыть ни полезную нагрузку установщика, ни архив браузера внутри неё, а значит, ни одна сборка не получится."
+        service: "system_core.services.chrome_portable_service:install_portable_7zip"
+        kind: "safe"
+
+      - id: defender_exclusion_remove
+        title: "Defender: remove exclusion"
+        title_ru: "Defender: убрать исключение"
+        description: "Take back the temporary build exclusion."
+        description_ru: "Забрать временное исключение сборки."
+        tooltip: "A build normally excludes its output folder from Windows Defender only while it runs and removes the exclusion the moment it finishes. This is the safety net for the rare case where a build was killed hard and the exclusion was left behind: it removes exactly that output-folder exclusion. Windows asks for UAC. It reads nothing else and changes no other Defender setting; removing an exclusion that is not there is not an error."
+        tooltip_ru: "Сборка обычно исключает свою папку output из Windows Defender только на время работы и снимает исключение сразу после. Это подстраховка на редкий случай, когда сборку убили жёстко и исключение осталось: снимается ровно оно, для папки output. Windows спросит UAC. Больше ничего не читается и никакие другие настройки Defender не трогаются; снять исключение, которого нет, - не ошибка."
+        service: "system_core.services.chrome_portable_service:defender_exclusion_remove"
+        kind: "dangerous"
+
+maintenance_operations:
+  - id: cleanup_input_output
+    title: "Clear I/O"
+    title_ru: "Очистить I/O"
+    description: "Empty the input and output folders."
+    description_ru: "Очистить папки input и output."
+    tooltip: "Deletes what lies inside the program's own input and output folders, keeping the folders themselves, and asks for confirmation first. Builds you have already copied elsewhere are not affected - only the working copies here."
+    tooltip_ru: "Удаляет то, что лежит внутри собственных папок программы input и output, сами папки остаются; сначала спрашивает подтверждение. Сборок, которые вы уже скопировали в другое место, это не касается - только рабочих копий здесь."
+    service: "system_core.services.sample_service:cleanup_input_output"
+    kind: "dangerous"
+
+  - id: cleanup_workspace
+    title: "Clear workspace"
+    title_ru: "Очистить workspace"
+    description: "Throw away the working leftovers."
+    description_ru: "Выбросить рабочие остатки."
+    tooltip: "Deletes downloads and unpacked installers from the workspace folder after confirmation. Finished builds, settings and logs are not touched - this is the leftover working material, which is large and of no use once a build is published."
+    tooltip_ru: "Удаляет из папки workspace загрузки и распакованные установщики, спросив подтверждение. Готовые сборки, настройки и журналы не трогает: это остатки рабочего материала, который занимает много места и не нужен после публикации сборки."
+    service: "system_core.services.sample_service:cleanup_workspace"
+    kind: "dangerous"
