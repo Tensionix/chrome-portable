@@ -8,7 +8,7 @@
 - [Direct download](https://audion.dev/get/chrome-portable/1.0.0/Audion_Chrome_Portable_v1.0.0_Full.zip) — unmetered, no rate limits
 - [Project page](https://audion.dev/downloads/chrome-portable) — every version and how to install
 
-![The program window](docs/screenshot.png)
+<img src="docs/screenshot.png" alt="The program window" width="560">
 
 `SHA-256: 74eafd54024b49891dc7c1083b798cd626644ad9c9d38e467ae69b5aa160e627`
 
