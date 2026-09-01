@@ -8,14 +8,14 @@
   <a href="https://github.com/Tensionix/chrome-portable/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/Tensionix/chrome-portable?style=flat-square&color=5fd08a&logo=apache&logoColor=white&cacheSeconds=3600"></a>
 </p>
 
-**Version 1.0.1** · 2026-09-01 · 82.3 MB
+**Version 1.0.1** · 2026-09-01 · 4.0 MB
 
-- [Direct download](https://dl.audion.dev/chrome-portable/1.0.1/Audion_Chrome_Portable_v1.0.1_Full.zip) — unmetered, no rate limits
+- [Direct download](https://dl.audion.dev/chrome-portable/1.0.1/Audion_Chrome_Portable_v1.0.1.zip) — unmetered, no rate limits
 - [Project page](https://audion.dev/downloads/chrome-portable) — every version and how to install
 
 <p align="center"><img src="docs/screenshot.png" alt="The program window" width="560"></p>
 
-`SHA-256: 616881bd87565897c1c4bc0ced98f45d0144de56cf38a4bbea17f3e9193d93d0`
+`SHA-256: 161e814694b7331584fcac86947e09f4fb182e86bf5f43909b73c4a7309a8bb1`
 
 ---
 
