@@ -23,7 +23,7 @@ An **Audion** tool, published by [Tensionix](https://github.com/Tensionix).
 <!-- /audion:release -->
 
 
-[Русский](Docs/README_RU.md) · [User Guide](Docs/USER_GUIDE_EN.md)
+[Русский](docs/README_RU.md) · [User Guide](docs/USER_GUIDE_EN.md)
 
 **Contents**
 
@@ -91,8 +91,8 @@ antivirus inspecting a freshly written executable. Covered in
 
 ## Next
 
-* [User Guide](Docs/USER_GUIDE_EN.md) — step by step.
-* [Checklist](Docs/SMOKE_TEST_RU.md) — what is run before a release (Russian).
+* [User Guide](docs/USER_GUIDE_EN.md) — step by step.
+* [Checklist](docs/SMOKE_TEST_RU.md) — what is run before a release (Russian).
 * `tools\CHROME_PLUS_AND_DEFENDER.md` — Chrome++ and the antivirus.
 * `tools\DECISIONS_EN.md` — decisions taken.
 
