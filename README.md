@@ -10,7 +10,7 @@
 
 **Version 1.0.1** · 2026-09-04 · 82.5 MB
 
-- [Direct download](https://dl.audion.dev/chrome-portable/1.0.1/Audion_Chrome_Portable_v1.0.1_Full.zip) — unmetered, no rate limits
+- [Direct download](https://audion.dev/get/chrome-portable/1.0.1/Audion_Chrome_Portable_v1.0.1_Full.zip) — unmetered, no rate limits
 - [Project page](https://audion.dev/downloads/chrome-portable) — every version and how to install
 
 <p align="center"><img src="docs/screenshot.png" alt="The program window" width="560"></p>
@@ -23,7 +23,16 @@ An **Audion** tool, published by [Tensionix](https://github.com/Tensionix).
 <!-- /audion:release -->
 
 
-[Русский](README_RU.md) · [User Guide](USER_GUIDE_EN.md)
+[Русский](Docs/README_RU.md) · [User Guide](Docs/USER_GUIDE_EN.md)
+
+**Contents**
+
+- [Why It Exists](#why-it-exists)
+- [What Is in the Build](#what-is-in-the-build)
+- [Certificates](#certificates)
+- [Chrome++](#chrome)
+- [Next](#next)
+- [Technical Reference](#technical-reference)
 
 Builds a portable Google Chrome, keeps it updated, keeps Chrome++ current, and
 places the Russian state root certificates into the build.
@@ -82,8 +91,8 @@ antivirus inspecting a freshly written executable. Covered in
 
 ## Next
 
-* [User Guide](USER_GUIDE_EN.md) — step by step.
-* [Checklist](SMOKE_TEST_RU.md) — what is run before a release (Russian).
+* [User Guide](Docs/USER_GUIDE_EN.md) — step by step.
+* [Checklist](Docs/SMOKE_TEST_RU.md) — what is run before a release (Russian).
 * `tools\CHROME_PLUS_AND_DEFENDER.md` — Chrome++ and the antivirus.
 * `tools\DECISIONS_EN.md` — decisions taken.
 

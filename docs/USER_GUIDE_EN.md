@@ -1,5 +1,14 @@
 # Audion Chrome Portable - user guide
 
+**Contents**
+
+- [How the window works](#how-the-window-works)
+- [First run](#first-run)
+- [What is inside the build](#what-is-inside-the-build)
+- [Updating](#updating)
+- [The certificate block](#the-certificate-block)
+- [Build settings](#build-settings)
+
 This program makes a portable Google Chrome: it lives in a folder, starts from
 anywhere, and is never installed into Windows. Bookmarks, passwords and tabs stay
 inside that folder. It does not disturb an installed Chrome — both can be open at

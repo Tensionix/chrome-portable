@@ -2,6 +2,17 @@
 
 [Русский](README_RU.md) · [User Guide](USER_GUIDE_EN.md)
 
+**Contents**
+
+- [Why It Exists](#why-it-exists)
+- [What Is in the Build](#what-is-in-the-build)
+- [Certificates](#certificates)
+- [Chrome++](#chrome)
+- [Next](#next)
+- [Technical Reference](#technical-reference)
+  - [The Window](#the-window)
+  - [Updating](#updating)
+
 Builds a portable Google Chrome, keeps it updated, keeps Chrome++ current, and
 places the Russian state root certificates into the build.
 
