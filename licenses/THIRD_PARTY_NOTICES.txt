@@ -10,7 +10,7 @@ Repeated legal texts are included once and referenced by document ID.
 BUNDLED COMPONENTS
 --------------------------------------------------------------------------------
 1. 7-Zip
-   Version: 26.2.0
+   Version: 26.3.0
    License: GNU LGPL / BSD; unRAR restriction where included; see bundled 7-Zip license
    Source type: optional-tool
    Provider: not recorded
@@ -59,7 +59,7 @@ BUNDLED COMPONENTS
    Legal documents: L-fe1049884b1a
 
 8. anyio
-   Version: 4.15.0
+   Version: 4.15.1
    License: MIT
    Source type: site-packages
    Provider: not recorded
@@ -72,435 +72,442 @@ BUNDLED COMPONENTS
    Provider: not recorded
    Legal documents: L-882115c95dfc
 
-10. beautifulsoup4
+10. Audion launcher
+   Version: bundled
+   License: Audion own code
+   Source type: audion-first-party
+   Provider: not recorded
+   Legal documents: L-f9aa24d322c0
+
+11. beautifulsoup4
    Version: 4.15.0
    License: MIT License
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-55b4d8d4b1e5, L-b989238918e1
 
-11. bidict
+12. bidict
    Version: 0.24.1
    License: MPL-2.0
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-099b9dcb0448
 
-12. bottle
+13. bottle
    Version: 0.13.4
    License: MIT
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-af150257b1f7
 
-13. certifi
+14. certifi
    Version: 2026.7.22
    License: MPL-2.0
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-e93716da6b9c
 
-14. cffi
+15. cffi
    Version: 2.1.1
    License: MIT-0
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-1d2438cadca3
 
-15. click
+16. click
    Version: 8.5.0
    License: BSD-3-Clause
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-9a8ad106a394
 
-16. clr_loader
+17. clr_loader
    Version: 0.3.1
    License: MIT
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-dd6bdca10cdc
 
-17. colorama
+18. colorama
    Version: 0.4.6
    License: License :: OSI Approved :: BSD License
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-cac35c02686e
 
-18. docutils
+19. docutils
    Version: 0.23
    License: License :: Public Domain; License :: OSI Approved :: BSD License; License :: OSI Approved :: GNU General Public License (GPL)
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-6ab4f27c76c7, L-c0e192fdb667, L-42ac50251ab8, L-b8f3b31a2f43
 
-19. fastapi
+20. fastapi
    Version: 0.141.1
    License: MIT
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-4ec89ffc8148
 
-20. frozenlist
+21. frozenlist
    Version: 1.8.0
    License: Apache-2.0
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-6fd5243e92dd
 
-21. fzf
+22. fzf
    Version: bundled
    License: MIT
    Source type: baseline-tool
    Provider: not recorded
    Legal documents: L-a296f423c0d3
 
-22. h11
+23. h11
    Version: 0.16.0
    License: MIT
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-37db5bb85926
 
-23. httpcore
+24. httpcore
    Version: 1.0.9
    License: BSD-3-Clause
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-fdcb59154c74
 
-24. httptools
+25. httptools
    Version: 0.8.0
    License: MIT
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-f4573e7cb767, L-628168d68bb5, L-2580ca6f428e
 
-25. httpx
+26. httpx
    Version: 0.28.1
    License: BSD-3-Clause
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-4ec59d544f12
 
-26. idna
-   Version: 3.19
+27. idna
+   Version: 3.20
    License: BSD-3-Clause
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-1a9a4f0e3d47
 
-27. ifaddr
+28. ifaddr
    Version: 0.2.0
    License: MIT
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-8700856576ae
 
-28. iniconfig
+29. iniconfig
    Version: 2.3.0
    License: MIT
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-3409fa91f7ac
 
-29. itsdangerous
+30. itsdangerous
    Version: 2.2.0
    License: License :: OSI Approved :: BSD License
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-63af09891b6b
 
-30. Jinja2
+31. Jinja2
    Version: 3.1.6
    License: License :: OSI Approved :: BSD License
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-3b49dcee4105
 
-31. markdown-it-py
+32. markdown-it-py
    Version: 4.2.0
    License: License :: OSI Approved :: MIT License
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-4a2260d6e2cd, L-792c48c5a849
 
-32. markdown2
+33. markdown2
    Version: 2.5.5
    License: MIT
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-350d81a24cca
 
-33. MarkupSafe
+34. MarkupSafe
    Version: 3.0.3
    License: BSD-3-Clause
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-489a8e110850
 
-34. mdurl
+35. mdurl
    Version: 0.1.2
    License: License :: OSI Approved :: MIT License
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-7c605df6e286
 
-35. multidict
-   Version: 6.7.1
+36. multidict
+   Version: 6.8.0
    License: Apache License 2.0
    Source type: site-packages
    Provider: not recorded
-   Legal documents: L-926b19214015
+   Legal documents: L-2e4be5fc6c4c
 
-36. nicegui
-   Version: 3.16.0
+37. nicegui
+   Version: 3.17.0
    License: MIT
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-41c065c20811
 
-37. orjson
+38. orjson
    Version: 3.12.0
    License: MPL-2.0 AND (Apache-2.0 OR MIT)
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-23f18e03dc49, L-143368af9701, L-3f3d9e0024b1
 
-38. packaging
+39. packaging
    Version: 26.3
    License: Apache-2.0 OR BSD-2-Clause
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-cad1ef5bd340, L-b70e7e9b742f, L-bb28c48e3e07
 
-39. pip
+40. pip
    Version: 26.2.1
    License: MIT
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-deed7c17a431, L-b80816b0d530, L-a8ad31b1c3f4, L-e93716da6b9c, L-1a9a4f0e3d47, L-a9d66f1d526d, L-81932e77fef4, L-cad1ef5bd340, L-f388fd38cad1, L-33be7b7e8fa4, L-808e10c8a6ab, L-130e3a64d5fd, L-29e0fd62e929, L-b70e7e9b742f, L-86da0f01aeae, L-1b22b049b526, L-86eeee87be2a, L-bb28c48e3e07, L-634300a669d4, L-9e9824923444, L-4eb1fb1705e2
 
-40. pluggy
+41. pluggy
    Version: 1.6.0
    License: MIT
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-d6b65e6c213a
 
-41. propcache
-   Version: 0.5.2
+42. propcache
+   Version: 0.5.4
    License: Apache-2.0
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-50e6751797c5, L-42205088a265
 
-42. proxy_tools
+43. proxy_tools
    Version: 0.1.0
    License: MIT
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-c26a5009d736
 
-43. pycparser
+44. pycparser
    Version: 3.0
    License: BSD-3-Clause
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-b345a9762fdc
 
-44. pydantic
+45. pydantic
    Version: 2.13.5
    License: MIT
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-a9e186f3ca16
 
-45. pydantic_core
+46. pydantic_core
    Version: 2.46.5
    License: MIT
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-2afdd30d54b4
 
-46. Pygments
+47. Pygments
    Version: 2.21.0
    License: BSD-2-Clause
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-a9d66f1d526d, L-ea74b9158f45
 
-47. pytest
+48. pytest
    Version: 9.1.1
    License: MIT
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-ca836a5f9ecc
 
-48. python-dotenv
+49. python-dotenv
    Version: 1.2.3
    License: BSD-3-Clause
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-80619b7049f0
 
-49. Python Embedded
+50. Python Embedded
    Version: 3.12.x
    License: PSF License Version 2 and bundled third-party notices
    Source type: baseline-runtime
    Provider: not recorded
    Legal documents: L-f6fa51e9cc3f
 
-50. python-engineio
+51. python-engineio
    Version: 4.14.0
    License: MIT
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-c9e97d3dbc1f
 
-51. python-multipart
+52. python-multipart
    Version: 0.0.32
    License: Apache-2.0
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-50e6751797c5
 
-52. python-socketio
-   Version: 5.16.4
+53. python-socketio
+   Version: 5.17.0
    License: MIT
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-c9e97d3dbc1f
 
-53. pythonnet
+54. pythonnet
    Version: 3.1.0
    License: MIT
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-e1dc3a6ff017, L-65a13631f078
 
-54. pywebview
+55. pywebview
    Version: 6.2.1
    License: License :: OSI Approved :: BSD License
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-4a988dd35988
 
-55. PyYAML
+56. PyYAML
    Version: 6.0.3
    License: MIT
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-8d3928f9dc44
 
-56. rich
+57. rich
    Version: 15.0.0
    License: MIT
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-deed7c17a431
 
-57. setuptools
+58. setuptools
    Version: 84.0.0
    License: MIT
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-86da0f01aeae, L-6557adc4bc1d, L-b80816b0d530, L-5a57cb4db85e, L-cad1ef5bd340, L-30c236186791, L-b70e7e9b742f, L-29e0fd62e929, L-9755a1851966, L-09f1c8c9e941, L-bb28c48e3e07, L-458502e12d97, L-2dddf0881829, L-09c9bcea95ca
 
-58. simple-websocket
+59. simple-websocket
    Version: 1.1.0
    License: License :: OSI Approved :: MIT License
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-4b8abadcc5e3
 
-59. soupsieve
+60. soupsieve
    Version: 2.9.2
    License: MIT
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-76a0acdb98c3
 
-60. starlette
+61. starlette
    Version: 1.6.0
    License: BSD-3-Clause
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-dcb95677a022
 
-61. tinycss2
+62. tinycss2
    Version: 1.5.1
    License: License :: OSI Approved :: BSD License
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-6b94acee20ec
 
-62. tqdm
-   Version: 4.70.0
+63. tqdm
+   Version: 4.70.1
    License: MPL-2.0 AND MIT
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-fcff87c3a47c
 
-63. typing_extensions
+64. typing_extensions
    Version: 4.16.0
    License: PSF-2.0
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-3b2f81fe21d1
 
-64. typing-inspection
+65. typing-inspection
    Version: 0.4.4
    License: MIT
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-804b59b25f2c
 
-65. uvicorn
-   Version: 0.52.4
+66. uvicorn
+   Version: 0.53.0
    License: BSD-3-Clause
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-efe1acf3e62f
 
-66. watchfiles
+67. watchfiles
    Version: 1.2.0
    License: MIT
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-4fd78355b67c
 
-67. webencodings
+68. webencodings
    Version: 0.6.1
    License: BSD-3-Clause
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-01b876deaedb, L-e06ef33485e7
 
-68. websockets
+69. websockets
    Version: 17.1
    License: BSD-3-Clause
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-3d6a0c050d8b
 
-69. wheel
+70. wheel
    Version: 0.48.0
    License: MIT
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-30c236186791
 
-70. wsproto
+71. wsproto
    Version: 1.3.2
    License: MIT
    Source type: site-packages
    Provider: not recorded
    Legal documents: L-fdbe26ef1b61
 
-71. yarl
-   Version: 1.24.5
+72. yarl
+   Version: 1.25.1
    License: Apache-2.0
    Source type: site-packages
    Provider: not recorded
@@ -515,7 +522,7 @@ CONSOLIDATED LEGAL DOCUMENTS
 [L-01b876deaedb] LICENSE-webencodings-BSD-3-Clause.txt
 SHA256: 01b876deaedb2e876a451c271903f3ad91ed6f62f60c0bbcfea6d8558e275c50
 Components: webencodings
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\webencodings-present-in-release\LICENSE-webencodings-BSD-3-Clause.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\webencodings-present-in-release\LICENSE-webencodings-BSD-3-Clause.txt
 --------------------------------------------------------------------------------
 Copyright (c) 2012 by Simon Sapin. Some rights reserved.
 
@@ -535,7 +542,7 @@ IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, 
 [L-099b9dcb0448] LICENSE_1.txt
 SHA256: 099b9dcb04485b32cf93aba82b303e099bcf98ab2476fae716d22c930fd6b915
 Components: bidict
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\bidict-0.24.1\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\bidict-0.24.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Mozilla Public License Version 2.0
 ==================================
@@ -919,7 +926,7 @@ Exhibit B - "Incompatible With Secondary Licenses" Notice
 [L-09c9bcea95ca] NOTICE_3.txt
 SHA256: 09c9bcea95ca086f8bc5bed174e40bc835b297d40fb5f86bbbb570fe0a5581a7
 Components: setuptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\setuptools-84.0.0\NOTICE_3.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\setuptools-84.0.0\NOTICE_3.txt
 --------------------------------------------------------------------------------
 The code contained in this directory was automatically generated using the
 following command:
@@ -1365,7 +1372,7 @@ Exhibit B - "Incompatible With Secondary Licenses" Notice
 [L-09f1c8c9e941] LICENSE_16.txt
 SHA256: 09f1c8c9e941af3e584d59641ea9b87d83c0cb0fd007eb5ef391a7e2643c1a46
 Components: setuptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\setuptools-84.0.0\LICENSE_16.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\setuptools-84.0.0\LICENSE_16.txt
 --------------------------------------------------------------------------------
 Copyright (c) 2012 Erik Rose
 
@@ -1392,7 +1399,7 @@ SOFTWARE.
 [L-104c58d1d450] NOTICE_1.txt
 SHA256: 104c58d1d450bd6474c09d8b64bc0182733a60ac3d8c253e334cde8294520ff1
 Components: aiofiles
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\aiofiles-25.1.0\NOTICE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\aiofiles-25.1.0\NOTICE_1.txt
 --------------------------------------------------------------------------------
 Asyncio support for files
 Copyright 2016 Tin Tvrtkovic
@@ -1402,7 +1409,7 @@ Copyright 2016 Tin Tvrtkovic
 [L-130e3a64d5fd] LICENSE_1txt
 SHA256: 130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686
 Components: pip
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\pip-26.2.1\LICENSE_1txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\pip-26.2.1\LICENSE_1txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -1431,7 +1438,7 @@ SOFTWARE.
 [L-143368af9701] LICENSE-APACHE_1.txt
 SHA256: 143368af9701a24ebaf89fe5310ad8116ca71e8e99f17415c0dd893f6a256ae4
 Components: orjson
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\orjson-3.12.0\LICENSE-APACHE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\orjson-3.12.0\LICENSE-APACHE_1.txt
 --------------------------------------------------------------------------------
 Apache License
                         Version 2.0, January 2004
@@ -1640,7 +1647,7 @@ limitations under the License.
 [L-1a9a4f0e3d47] LICENSE_1md
 SHA256: 1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04
 Components: idna, pip
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\idna-3.19\LICENSE_1md
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\idna-3.20\LICENSE_1md
 --------------------------------------------------------------------------------
 BSD 3-Clause License
 
@@ -1679,7 +1686,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 [L-1b22b049b526] LICENSE_11.txt
 SHA256: 1b22b049b5267d6dfc23a67bf4a84d8ec04b9fdfb1a51d360e42b4342c8b4154
 Components: pip
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\pip-26.2.1\LICENSE_11.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\pip-26.2.1\LICENSE_11.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -1708,7 +1715,7 @@ THE SOFTWARE.
 [L-1d2438cadca3] LICENSE_1.txt
 SHA256: 1d2438cadca31cb11257f8440703766e42c995202aa27e7f629f9a79a8b5c07f
 Components: cffi
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\cffi-2.1.1\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\cffi-2.1.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Except when otherwise stated (look for LICENSE files in directories or
 information at the beginning of each file) all software and
@@ -1737,7 +1744,7 @@ documentation is licensed as follows:
 [L-23f18e03dc49] LICENSE-MIT_1.txt
 SHA256: 23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3
 Components: orjson
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\orjson-3.12.0\LICENSE-MIT_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\orjson-3.12.0\LICENSE-MIT_1.txt
 --------------------------------------------------------------------------------
 Permission is hereby granted, free of charge, to any
 person obtaining a copy of this software and associated
@@ -1768,7 +1775,7 @@ DEALINGS IN THE SOFTWARE.
 [L-2580ca6f428e] LICENSE-MIT_1.txt
 SHA256: 2580ca6f428e469f8f6626f621ea867d5356638d97dc748b5790df8ae52b3926
 Components: httptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\httptools-0.8.0\LICENSE-MIT_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\httptools-0.8.0\LICENSE-MIT_1.txt
 --------------------------------------------------------------------------------
 Copyright Joyent, Inc. and other Node contributors.
 
@@ -1795,7 +1802,7 @@ IN THE SOFTWARE.
 [L-29e0fd62e929] LICENSE_9.txt
 SHA256: 29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6
 Components: pip, setuptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\pip-26.2.1\LICENSE_9.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\pip-26.2.1\LICENSE_9.txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -1824,7 +1831,7 @@ SOFTWARE.
 [L-2afdd30d54b4] LICENSE_1.txt
 SHA256: 2afdd30d54b4d62b6f488a6bcc1546e84ec5061f13f4209c03d012348783795a
 Components: pydantic_core
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\pydantic-core-2.46.5\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\pydantic-core-2.46.5\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -1853,7 +1860,7 @@ SOFTWARE.
 [L-2dddf0881829] NOTICE_2.txt
 SHA256: 2dddf08818297a3b89d43d95ff659d8da85741108c9136dfa3a4d856c0623bd8
 Components: setuptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\setuptools-84.0.0\NOTICE_2.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\setuptools-84.0.0\NOTICE_2.txt
 --------------------------------------------------------------------------------
 The following files include code from opensource projects
 (either as direct copies or modified versions):
@@ -1870,8 +1877,8 @@ The following files include code from opensource projects
 
 [L-2e4be5fc6c4c] LICENSE_1txt
 SHA256: 2e4be5fc6c4c72a466fcb665d726e049a6891981fe536c4f04b6366749461d23
-Components: aiohttp
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\aiohttp-3.14.3\LICENSE_1txt
+Components: aiohttp, multidict
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\aiohttp-3.14.3\LICENSE_1txt
 --------------------------------------------------------------------------------
 Apache License
                            Version 2.0, January 2004
@@ -2080,7 +2087,7 @@ Apache License
 [L-30c236186791] LICENSE_1txt
 SHA256: 30c23618679108f3e8ea1d2a658c7ca417bdfc891c98ef1a89fa4ff0c9828654
 Components: setuptools, wheel
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\setuptools-84.0.0\LICENSE_1txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\setuptools-84.0.0\LICENSE_1txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -2109,7 +2116,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 [L-33be7b7e8fa4] LICENSE_8.txt
 SHA256: 33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca
 Components: pip
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\pip-26.2.1\LICENSE_8.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\pip-26.2.1\LICENSE_8.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -2138,7 +2145,7 @@ THE SOFTWARE.
 [L-3409fa91f7ac] LICENSE_1.txt
 SHA256: 3409fa91f7ace557894632676656e32264fe5ef7581535725dc9a23774551bd4
 Components: iniconfig
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\iniconfig-2.3.0\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\iniconfig-2.3.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -2167,7 +2174,7 @@ SOFTWARE.
 [L-350d81a24cca] LICENSE_1txt
 SHA256: 350d81a24cca849298e755022fad37c43a006ccdea3f6dcf044f00832deeea6f
 Components: markdown2
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\markdown2-2.5.5\LICENSE_1txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\markdown2-2.5.5\LICENSE_1txt
 --------------------------------------------------------------------------------
 This implementation of Markdown is licensed under the MIT License:
 
@@ -2233,7 +2240,7 @@ as follows:
 [L-37db5bb85926] LICENSE_1txt
 SHA256: 37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361
 Components: h11
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\h11-0.16.0\LICENSE_1txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\h11-0.16.0\LICENSE_1txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -2263,7 +2270,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 [L-3b2f81fe21d1] LICENSE_1.txt
 SHA256: 3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf
 Components: aiohappyeyeballs, typing_extensions
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\aiohappyeyeballs-2.7.1\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\aiohappyeyeballs-2.7.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 A. HISTORY OF THE SOFTWARE
 ==========================
@@ -2550,7 +2557,7 @@ PERFORMANCE OF THIS SOFTWARE.
 [L-3b49dcee4105] LICENSE_1txt
 SHA256: 3b49dcee4105eb37bac10faf1be260408fe85d252b8e9df2e0979fc1e094437b
 Components: Jinja2
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\jinja2-3.1.6\LICENSE_1txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\jinja2-3.1.6\LICENSE_1txt
 --------------------------------------------------------------------------------
 Copyright 2007 Pallets
 
@@ -2586,7 +2593,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 [L-3d6a0c050d8b] LICENSE_1.txt
 SHA256: 3d6a0c050d8bec52fabad502e45fb25bd02bcadbd70dea34d447b6a0ff4e6da8
 Components: websockets
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\websockets-17.1\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\websockets-17.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Copyright (c) Aymeric Augustin and contributors
 
@@ -2618,7 +2625,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 [L-3f3d9e0024b1] LICENSE-MPL-2_10
 SHA256: 3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04
 Components: orjson
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\orjson-3.12.0\LICENSE-MPL-2_10
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\orjson-3.12.0\LICENSE-MPL-2_10
 --------------------------------------------------------------------------------
 Mozilla Public License Version 2.0
 ==================================
@@ -2999,7 +3006,7 @@ Exhibit B - "Incompatible With Secondary Licenses" Notice
 [L-41c065c20811] LICENSE_1.txt
 SHA256: 41c065c2081141886f7d3004e3cd4000c1507cc4bf37a063f12be1d53e9db272
 Components: nicegui
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\nicegui-3.16.0\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\nicegui-3.17.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -3028,7 +3035,7 @@ SOFTWARE.
 [L-42205088a265] NOTICE_1.txt
 SHA256: 42205088a265b992eda47039779e856e1f0d9ac819415bb6dc37bee47994ef44
 Components: propcache, yarl
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\propcache-0.5.2\NOTICE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\propcache-0.5.4\NOTICE_1.txt
 --------------------------------------------------------------------------------
 Copyright 2016-2021, Andrew Svetlov and aio-libs team
 
@@ -3049,7 +3056,7 @@ Copyright 2016-2021, Andrew Svetlov and aio-libs team
 [L-42ac50251ab8] BSD-0-Clause_1rst
 SHA256: 42ac50251ab8a6738f77d5707f2a788dbf3446a6ed68edecb6ac17489a78e163
 Components: docutils
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\docutils-0.23\BSD-0-Clause_1rst
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\docutils-0.23\BSD-0-Clause_1rst
 --------------------------------------------------------------------------------
 Zero-Clause BSD
 ===============
@@ -3070,7 +3077,7 @@ OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 [L-458502e12d97] LICENSE_17.txt
 SHA256: 458502e12d97bbf64438606a20044aa85eb05fb0a8a807bb35dbec253fd1fc04
 Components: setuptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\setuptools-84.0.0\LICENSE_17.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\setuptools-84.0.0\LICENSE_17.txt
 --------------------------------------------------------------------------------
 Apache License
 Version 2.0, January 2004
@@ -3151,7 +3158,7 @@ limitations under the License.
 [L-489a8e110850] LICENSE_1txt
 SHA256: 489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea
 Components: MarkupSafe
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\markupsafe-3.0.3\LICENSE_1txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\markupsafe-3.0.3\LICENSE_1txt
 --------------------------------------------------------------------------------
 Copyright 2010 Pallets
 
@@ -3187,7 +3194,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 [L-4a2260d6e2cd] LICENSE_1.txt
 SHA256: 4a2260d6e2cd0f5a151a1e86dbfe7d3ed552b1e2beabf9941c1ba5c49cbce484
 Components: markdown-it-py
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\markdown-it-py-4.2.0\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\markdown-it-py-4.2.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -3216,7 +3223,7 @@ SOFTWARE.
 [L-4a988dd35988] LICENSE_1.txt
 SHA256: 4a988dd3598832cd3653de20dc33cb677d0fb53ab5551c879ca31280ae653675
 Components: pywebview
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\pywebview-6.2.1\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\pywebview-6.2.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 BSD 3-Clause License
 
@@ -3253,7 +3260,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 [L-4b8abadcc5e3] LICENSE_1.txt
 SHA256: 4b8abadcc5e3dd29c71905b84952945699f0a7ba41e6af99eaba46faabe95bb7
 Components: simple-websocket
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\simple-websocket-1.1.0\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\simple-websocket-1.1.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -3282,7 +3289,7 @@ SOFTWARE.
 [L-4eb1fb1705e2] AUTHORS.txt
 SHA256: 4eb1fb1705e2def898e81bcba19c3aac80620d27ba3569d6a6df7b4629d1b5c2
 Components: pip
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\pip-26.2.1\AUTHORS.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\pip-26.2.1\AUTHORS.txt
 --------------------------------------------------------------------------------
 @Switch01
 A_Rog
@@ -4178,7 +4185,7 @@ Zvezdan Petkovic
 [L-4ec59d544f12] LICENSE_1md
 SHA256: 4ec59d544f12b5f539a3a716fd321ac58ccd8030b465221f2c880200cdf28d8d
 Components: httpx
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\httpx-0.28.1\LICENSE_1md
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\httpx-0.28.1\LICENSE_1md
 --------------------------------------------------------------------------------
 Copyright © 2019, [Encode OSS Ltd](https://www.encode.io/).
 All rights reserved.
@@ -4198,7 +4205,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 [L-4ec89ffc8148] LICENSE_1.txt
 SHA256: 4ec89ffc81485b97fec584b2d4a961032eeffe834453894fd9c1274906cc744e
 Components: fastapi
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\fastapi-0.141.1\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\fastapi-0.141.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -4227,7 +4234,7 @@ THE SOFTWARE.
 [L-4fd78355b67c] LICENSE_1.txt
 SHA256: 4fd78355b67ce2677ede9fb6f63a250f377bb7e22088136a5f4699adb4bc069f
 Components: watchfiles
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\watchfiles-1.2.0\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\watchfiles-1.2.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -4256,7 +4263,7 @@ SOFTWARE.
 [L-50e6751797c5] LICENSE_1.txt
 SHA256: 50e6751797c50dedd75ef1b8a0d9e42f5f8472e9fbce91f34718e9f97b0c780a
 Components: propcache, python-multipart, yarl
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\propcache-0.5.2\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\propcache-0.5.4\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Apache License
                            Version 2.0, January 2004
@@ -4465,7 +4472,7 @@ Apache License
 [L-5361ac9dc58f] LICENSE_1.txt
 SHA256: 5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0
 Components: anyio
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\anyio-4.15.0\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\anyio-4.15.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -4493,7 +4500,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 [L-55b4d8d4b1e5] LICENSE_1.txt
 SHA256: 55b4d8d4b1e5bc86d10efac91b74c87bcb77526b0f5b9edaf8b9cd2adc7397b2
 Components: beautifulsoup4
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\beautifulsoup4-4.15.0\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\beautifulsoup4-4.15.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Beautiful Soup is made available under the MIT license:
 
@@ -4532,7 +4539,7 @@ Isaac Muse
 [L-5a57cb4db85e] LICENSE_12.txt
 SHA256: 5a57cb4db85e2a2dd88c290628908add57e3451449e0a9a71fdfb38776fd759d
 Components: setuptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\setuptools-84.0.0\LICENSE_12.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\setuptools-84.0.0\LICENSE_12.txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -4558,7 +4565,7 @@ USE OR OTHER DEALINGS IN THE SOFTWARE.
 [L-628168d68bb5] LICENSE_1.txt
 SHA256: 628168d68bb5a8a17e0bbefb3bd74e326e1edc20583d76f52f457c82c921867d
 Components: aiohttp, httptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\aiohttp-3.14.3\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\aiohttp-3.14.3\LICENSE_1.txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -4588,7 +4595,7 @@ USE OR OTHER DEALINGS IN THE SOFTWARE.
 [L-634300a669d4] LICENSE_3txt
 SHA256: 634300a669d49aeae65b12c6c48c924c51a4cdf3d1ff086dc3456dc8bcaa2104
 Components: pip
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\pip-26.2.1\LICENSE_3txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\pip-26.2.1\LICENSE_3txt
 --------------------------------------------------------------------------------
 Copyright (c) 2008-present The pip developers (see AUTHORS.txt file)
 
@@ -4616,7 +4623,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 [L-63af09891b6b] LICENSE_1txt
 SHA256: 63af09891b6be8ad1a4252ed43af0f4efba7fc948e228367bed7f3c5ae0b09d7
 Components: itsdangerous
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\itsdangerous-2.2.0\LICENSE_1txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\itsdangerous-2.2.0\LICENSE_1txt
 --------------------------------------------------------------------------------
 Copyright 2011 Pallets
 
@@ -4652,7 +4659,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 [L-6557adc4bc1d] LICENSE_10.txt
 SHA256: 6557adc4bc1d59232e27567a185dd70cf2ecca3154018b0be61ea29cf9e814e2
 Components: setuptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\setuptools-84.0.0\LICENSE_10.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\setuptools-84.0.0\LICENSE_10.txt
 --------------------------------------------------------------------------------
 GNU LESSER GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
@@ -4825,7 +4832,7 @@ Library.
 [L-65a13631f078] AUTHORS_1md
 SHA256: 65a13631f078bed51e9a4033dea257e57a7f23097f3003b1ce1ba1c8a9136c93
 Components: pythonnet
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\pythonnet-3.1.0\AUTHORS_1md
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\pythonnet-3.1.0\AUTHORS_1md
 --------------------------------------------------------------------------------
 # Credits
 
@@ -4925,7 +4932,7 @@ Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_au
 [L-6ab4f27c76c7] COPYING_1rst
 SHA256: 6ab4f27c76c74f96e5e692da5944a6f82968f3bddaac5660a4aa723e70eb5d8f
 Components: docutils
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\docutils-0.23\COPYING_1rst
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\docutils-0.23\COPYING_1rst
 --------------------------------------------------------------------------------
 .. include:: docs/header0.rst
 
@@ -5084,7 +5091,7 @@ licenses_ directory.
 [L-6b94acee20ec] LICENSE_1.txt
 SHA256: 6b94acee20ec9f2709333134f3ba70322535fb420af0ce8c1455d9cbe297f1d5
 Components: tinycss2
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\tinycss2-1.5.1\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\tinycss2-1.5.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 BSD 3-Clause License
 
@@ -5121,7 +5128,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 [L-6fd5243e92dd] LICENSE_1.txt
 SHA256: 6fd5243e92dd7f98ec69c7ac377728e74905709ff527a5bf98d6d0263c04f5b6
 Components: aiosignal, frozenlist
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\aiosignal-1.4.0\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\aiosignal-1.4.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Apache License
                            Version 2.0, January 2004
@@ -5330,7 +5337,7 @@ Apache License
 [L-76a0acdb98c3] LICENSE_1md
 SHA256: 76a0acdb98c3a63681e20b6f096699ef8cad5fb35d56eef8387e0fa71d797a9a
 Components: soupsieve
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\soupsieve-2.9.2\LICENSE_1md
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\soupsieve-2.9.2\LICENSE_1md
 --------------------------------------------------------------------------------
 MIT License
 
@@ -5359,7 +5366,7 @@ SOFTWARE.
 [L-792c48c5a849] LICENSE_1markdown-it
 SHA256: 792c48c5a849a15fdf9e37e8bcf9e6d1dd13b32b46c642a748a0a46a9919d473
 Components: markdown-it-py
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\markdown-it-py-4.2.0\LICENSE_1markdown-it
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\markdown-it-py-4.2.0\LICENSE_1markdown-it
 --------------------------------------------------------------------------------
 Copyright (c) 2014 Vitaly Puzrin, Alex Kocharin.
 
@@ -5389,7 +5396,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 [L-7c605df6e286] LICENSE_1.txt
 SHA256: 7c605df6e28667a9603118e98274f64a49ce3eed0d26fccce9534a345e0ef955
 Components: mdurl
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\mdurl-0.1.2\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\mdurl-0.1.2\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Copyright (c) 2015 Vitaly Puzrin, Alex Kocharin.
 Copyright (c) 2021 Taneli Hukkinen
@@ -5443,7 +5450,7 @@ IN THE SOFTWARE.
 [L-804b59b25f2c] LICENSE_1.txt
 SHA256: 804b59b25f2c31bd278f9202a19ae49a3945aa2664387e2d0a128c7cacc61ec3
 Components: typing-inspection
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\typing-inspection-0.4.4\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\typing-inspection-0.4.4\LICENSE_1.txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -5472,7 +5479,7 @@ SOFTWARE.
 [L-80619b7049f0] LICENSE_1.txt
 SHA256: 80619b7049f08c81683ad0e01f08f257a840652dd71ee83146d36658c7d2c2b9
 Components: python-dotenv
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\python-dotenv-1.2.3\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\python-dotenv-1.2.3\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Copyright (c) 2014, Saurabh Kumar (python-dotenv), 2013, Ted Tieken (django-dotenv-rw), 2013, Jacob Kaplan-Moss (django-dotenv)
 
@@ -5507,7 +5514,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 [L-808e10c8a6ab] LICENSE.txt
 SHA256: 808e10c8a6ab8deb149ff9b3fb19f447a808094606d712a9ca57fead3552599d
 Components: pip
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\pip-26.2.1\LICENSE.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\pip-26.2.1\LICENSE.txt
 --------------------------------------------------------------------------------
 A. HISTORY OF THE SOFTWARE
 ==========================
@@ -5799,7 +5806,7 @@ OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 [L-81932e77fef4] LICENSE_5.txt
 SHA256: 81932e77fef4cec306da54caf7d4d221dfd0f6fb6da214c712e36cb95ac47906
 Components: pip
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\pip-26.2.1\LICENSE_5.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\pip-26.2.1\LICENSE_5.txt
 --------------------------------------------------------------------------------
 Apache License
                            Version 2.0, January 2004
@@ -5981,7 +5988,7 @@ Apache License
 [L-86da0f01aeae] LICENSE_10.txt
 SHA256: 86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741
 Components: pip, setuptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\pip-26.2.1\LICENSE_10.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\pip-26.2.1\LICENSE_10.txt
 --------------------------------------------------------------------------------
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to
@@ -6006,7 +6013,7 @@ IN THE SOFTWARE.
 [L-86eeee87be2a] LICENSE_2txt
 SHA256: 86eeee87be2a43f3ff1f56496f451f69243926f025fedbb033666c304c4c161b
 Components: pip
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\pip-26.2.1\LICENSE_2txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\pip-26.2.1\LICENSE_2txt
 --------------------------------------------------------------------------------
 Copyright 2012-2021  Eric Larson
 
@@ -6027,7 +6034,7 @@ limitations under the License.
 [L-8700856576ae] LICENSE_1txt
 SHA256: 8700856576ae2bc80c63bc970250510d9213fb02fed006d5f22742c9ddde24d7
 Components: ifaddr
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\ifaddr-0.2.0\LICENSE_1txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\ifaddr-0.2.0\LICENSE_1txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -6056,7 +6063,7 @@ THE SOFTWARE.
 [L-882115c95dfc] LICENSE_1.txt
 SHA256: 882115c95dfc2af1eeb6714f8ec6d5cbcabf667caff8729f42420da63f714e9f
 Components: attrs
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\attrs-26.1.0\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\attrs-26.1.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -6085,7 +6092,7 @@ SOFTWARE.
 [L-8d3928f9dc44] LICENSE_1.txt
 SHA256: 8d3928f9dc4490fd635707cb88eb26bd764102a7282954307d3e5167a577e8a4
 Components: PyYAML
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\pyyaml-6.0.3\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\pyyaml-6.0.3\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Copyright (c) 2017-2021 Ingy döt Net
 Copyright (c) 2006-2016 Kirill Simonov
@@ -6110,31 +6117,10 @@ SOFTWARE.
 
 ================================================================================
 
-[L-926b19214015] LICENSE_1.txt
-SHA256: 926b19214015f0cad2a2c31c418401961379ae8d72b25a637981bb7a5158a96b
-Components: multidict
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\multidict-6.7.1\LICENSE_1.txt
---------------------------------------------------------------------------------
-Copyright 2016 Andrew Svetlov and aio-libs contributors
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
-
-================================================================================
-
 [L-9755a1851966] LICENSE_15.txt
 SHA256: 9755a18519666e5f0f4cae3daad3d7012bcae48a600b31237d75e9fe134e6683
 Components: setuptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\setuptools-84.0.0\LICENSE_15.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\setuptools-84.0.0\LICENSE_15.txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -6160,7 +6146,7 @@ USE OR OTHER DEALINGS IN THE SOFTWARE.
 [L-9a8ad106a394] LICENSE_1txt
 SHA256: 9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d
 Components: click
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\click-8.5.0\LICENSE_1txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\click-8.5.0\LICENSE_1txt
 --------------------------------------------------------------------------------
 Copyright 2014 Pallets
 
@@ -6196,7 +6182,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 [L-9e9824923444] COPYING
 SHA256: 9e98249234446e96ab6cd2ac59cbb2f7bfcb15a8e21a00548e1e14da939b6927
 Components: pip
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\pip-26.2.1\COPYING
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\pip-26.2.1\COPYING
 --------------------------------------------------------------------------------
 Copyright (C) 2008-2011 INADA Naoki <songofacandy@gmail.com>
 
@@ -6217,7 +6203,7 @@ Copyright (C) 2008-2011 INADA Naoki <songofacandy@gmail.com>
 [L-a296f423c0d3] LICENSE-fzf.txt
 SHA256: a296f423c0d30ce3581435e78e7e36c5fe73984a882d8720c72e713b4593588b
 Components: fzf
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\fzf-bundled\LICENSE-fzf.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\fzf-bundled\LICENSE-fzf.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -6246,7 +6232,7 @@ THE SOFTWARE.
 [L-a8ad31b1c3f4] LICENSE_1.txt
 SHA256: a8ad31b1c3f40dca5a84119351b8fa8ddc868edd77fad8a8ebf6d8f2d16fa4ae
 Components: aiofiles, pip
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\aiofiles-25.1.0\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\aiofiles-25.1.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Apache License
                            Version 2.0, January 2004
@@ -6455,7 +6441,7 @@ Apache License
 [L-a9d66f1d526d] LICENSE_4.txt
 SHA256: a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17
 Components: pip, Pygments
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\pip-26.2.1\LICENSE_4.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\pip-26.2.1\LICENSE_4.txt
 --------------------------------------------------------------------------------
 Copyright (c) 2006-2022 by the respective authors (see AUTHORS file).
 All rights reserved.
@@ -6488,7 +6474,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 [L-a9e186f3ca16] LICENSE_1.txt
 SHA256: a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3
 Components: pydantic
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\pydantic-2.13.5\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\pydantic-2.13.5\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -6517,7 +6503,7 @@ SOFTWARE.
 [L-ad1993a3e22c] License.txt
 SHA256: ad1993a3e22caa3448fe6daf27f3175435ddddd7bcb73e45334b936f38d32e68
 Components: 7-Zip
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\7-zip-present-in-release\License.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\7-zip-present-in-release\License.txt
 --------------------------------------------------------------------------------
 7-Zip Extra
   ~~~~~~~~~~~
@@ -6648,7 +6634,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 [L-af150257b1f7] LICENSE_1.txt
 SHA256: af150257b1f7cce92b6207854f2e8f90ea9ae52d7cac758d13a47bd12e2a2443
 Components: bottle
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\bottle-0.13.4\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\bottle-0.13.4\LICENSE_1.txt
 --------------------------------------------------------------------------------
 Copyright (c) 2009-2024, Marcel Hellkamp.
 
@@ -6675,7 +6661,7 @@ THE SOFTWARE.
 [L-b345a9762fdc] LICENSE_1.txt
 SHA256: b345a9762fdc5175d3d486d344cdcbb79078aee7c00e47fcc756ef2c4f5dcb61
 Components: pycparser
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\pycparser-3.0\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\pycparser-3.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 pycparser -- A C parser in Python
 
@@ -6710,7 +6696,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 [L-b70e7e9b742f] LICENSE_1BSD
 SHA256: b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5
 Components: packaging, pip, setuptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\packaging-26.3\LICENSE_1BSD
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\packaging-26.3\LICENSE_1BSD
 --------------------------------------------------------------------------------
 Copyright (c) Donald Stufft and individual contributors.
 All rights reserved.
@@ -6741,7 +6727,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 [L-b80816b0d530] LICENSE_1.txt
 SHA256: b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe
 Components: pip, setuptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\pip-26.2.1\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\pip-26.2.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -6770,7 +6756,7 @@ SOFTWARE.
 [L-b8f3b31a2f43] BSD-2-Clause_1rst
 SHA256: b8f3b31a2f4312401fe4122fe932a333ec0d7e47d849c02da0404e8048fe74d0
 Components: docutils
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\docutils-0.23\BSD-2-Clause_1rst
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\docutils-0.23\BSD-2-Clause_1rst
 --------------------------------------------------------------------------------
 2-Clause BSD license / FreeBSD license
 ======================================
@@ -6803,7 +6789,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 [L-b989238918e1] AUTHORS_1.txt
 SHA256: b989238918e1fdac1e46717cb405b63e92497a272413af0d989c1df6c8abcb6f
 Components: beautifulsoup4
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\beautifulsoup4-4.15.0\AUTHORS_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\beautifulsoup4-4.15.0\AUTHORS_1.txt
 --------------------------------------------------------------------------------
 Behold, mortal, the origins of Beautiful Soup...
 ================================================
@@ -6860,7 +6846,7 @@ found ways to break Beautiful Soup:
 [L-bb28c48e3e07] LICENSE_1APACHE
 SHA256: bb28c48e3e078166e91cfc2b6db7ffebb8a0973b9e23b3df060561292d8d69ec
 Components: packaging, pip, setuptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\packaging-26.3\LICENSE_1APACHE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\packaging-26.3\LICENSE_1APACHE
 --------------------------------------------------------------------------------
 Apache License
                            Version 2.0, January 2004
@@ -7044,7 +7030,7 @@ Apache License
 [L-c0e192fdb667] gpl-3-0_1txt
 SHA256: c0e192fdb6671d51cc645d81b74a1da5b7762bbf79d8dc75a85411b816b87c15
 Components: docutils
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\docutils-0.23\gpl-3-0_1txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\docutils-0.23\gpl-3-0_1txt
 --------------------------------------------------------------------------------
 GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
@@ -7726,7 +7712,7 @@ Public License instead of this License.  But first, please read
 [L-c26a5009d736] LICENSE-proxy_tools-MIT.txt
 SHA256: c26a5009d736e4c1740859873d798e5283c867dbec9fe0a14b9ba47730bcfcb5
 Components: proxy_tools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\proxy-tools-present-in-release\LICENSE-proxy_tools-MIT.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\proxy-tools-present-in-release\LICENSE-proxy_tools-MIT.txt
 --------------------------------------------------------------------------------
 proxy_tools metadata declares the package license as MIT.
 
@@ -7755,7 +7741,7 @@ SOFTWARE.
 [L-c9e97d3dbc1f] LICENSE_1.txt
 SHA256: c9e97d3dbc1fbbcdb4f7808b282cd646db887aff4f5313fe6bbe8d4c31405a9c
 Components: python-engineio, python-socketio
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\python-engineio-4.14.0\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\python-engineio-4.14.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -7783,7 +7769,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 [L-ca836a5f9ecc] LICENSE_1.txt
 SHA256: ca836a5f9ecca3b2f350230faa20a48fb8b145653b5568d784862df864706b9b
 Components: pytest
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\pytest-9.1.1\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\pytest-9.1.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -7812,7 +7798,7 @@ SOFTWARE.
 [L-cac35c02686e] LICENSE_1txt
 SHA256: cac35c02686e5d04a5a7140bfb3b36e73aed496656e891102e428886d7930318
 Components: colorama
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\colorama-0.4.6\LICENSE_1txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\colorama-0.4.6\LICENSE_1txt
 --------------------------------------------------------------------------------
 Copyright (c) 2010 Jonathan Hartley
 All rights reserved.
@@ -7847,7 +7833,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 [L-cad1ef5bd340] LICENSE_1.txt
 SHA256: cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48
 Components: packaging, pip, setuptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\packaging-26.3\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\packaging-26.3\LICENSE_1.txt
 --------------------------------------------------------------------------------
 This software is made available under the terms of *either* of the licenses
 found in LICENSE.APACHE or LICENSE.BSD. Contributions to this software is made
@@ -7858,7 +7844,7 @@ under the terms of *both* these licenses.
 [L-d6b65e6c213a] LICENSE_1.txt
 SHA256: d6b65e6c213a5d0b577911d34d6e5949b9f59d76c238c5071a2f3fc16cfb2606
 Components: pluggy
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\pluggy-1.6.0\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\pluggy-1.6.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -7887,7 +7873,7 @@ SOFTWARE.
 [L-dcb95677a022] LICENSE_1md
 SHA256: dcb95677a02240243187e964f941847d19b17821cf99e5afae684fab328c19bf
 Components: starlette
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\starlette-1.6.0\LICENSE_1md
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\starlette-1.6.0\LICENSE_1md
 --------------------------------------------------------------------------------
 Copyright © 2018, [Encode OSS Ltd](https://www.encode.io/).
 All rights reserved.
@@ -7922,7 +7908,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 [L-dd6bdca10cdc] LICENSE_1.txt
 SHA256: dd6bdca10cdc3b24c6b0b6cef5fd611b7feb6917f127833283ddcdb310d3b453
 Components: clr_loader
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\clr-loader-0.3.1\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\clr-loader-0.3.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -7951,7 +7937,7 @@ SOFTWARE.
 [L-deed7c17a431] LICENSE
 SHA256: deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15
 Components: pip, rich
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\pip-26.2.1\LICENSE
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\pip-26.2.1\LICENSE
 --------------------------------------------------------------------------------
 Copyright (c) 2020 Will McGugan
 
@@ -7978,7 +7964,7 @@ SOFTWARE.
 [L-e06ef33485e7] LICENSE_1.txt
 SHA256: e06ef33485e7498ad592887c41fa79cc8a7fecde576c7210e11bfdddef58040e
 Components: webencodings
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\webencodings-0.6.1\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\webencodings-0.6.1\LICENSE_1.txt
 --------------------------------------------------------------------------------
 BSD 3-Clause License
 
@@ -8015,7 +8001,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 [L-e1dc3a6ff017] LICENSE_1.txt
 SHA256: e1dc3a6ff017a6800dc27a7220500f512b95fbcd996d38ebbbff85c693245369
 Components: pythonnet
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\pythonnet-3.1.0\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\pythonnet-3.1.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 MIT License
 
@@ -8044,7 +8030,7 @@ DEALINGS IN THE SOFTWARE.
 [L-e93716da6b9c] LICENSE_1.txt
 SHA256: e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7
 Components: certifi, pip
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\certifi-2026.7.22\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\certifi-2026.7.22\LICENSE_1.txt
 --------------------------------------------------------------------------------
 This package contains a modified version of ca-bundle.crt:
 
@@ -8072,7 +8058,7 @@ one at http://mozilla.org/MPL/2.0/.
 [L-ea74b9158f45] AUTHORS_1.txt
 SHA256: ea74b9158f4587191549080d5713701859bf6f7b61ce491020338128131847f3
 Components: Pygments
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\pygments-2.21.0\AUTHORS_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\pygments-2.21.0\AUTHORS_1.txt
 --------------------------------------------------------------------------------
 Pygments is written and maintained by Georg Brandl <georg@python.org>.
 
@@ -8376,7 +8362,7 @@ Many thanks for all contributions!
 [L-efe1acf3e62f] LICENSE_1md
 SHA256: efe1acf3e62fb99c288b0ec73e5a773b7268ef4320fe757ea994214e4b63c371
 Components: uvicorn
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\uvicorn-0.52.4\LICENSE_1md
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\uvicorn-0.53.0\LICENSE_1md
 --------------------------------------------------------------------------------
 Copyright © 2017-present, [Encode OSS Ltd](https://www.encode.io/).
 All rights reserved.
@@ -8411,7 +8397,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 [L-f388fd38cad1] LICENSE_7.txt
 SHA256: f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d
 Components: pip
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\pip-26.2.1\LICENSE_7.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\pip-26.2.1\LICENSE_7.txt
 --------------------------------------------------------------------------------
 Copyright (c) 2018, Tzu-ping Chung <uranusjr@gmail.com>
 
@@ -8432,7 +8418,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 [L-f4573e7cb767] LICENSE_2.txt
 SHA256: f4573e7cb7676745fb5b8d36fa548aa93e391cfb6872ddacd65130c45ea6a92d
 Components: httptools
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\httptools-0.8.0\LICENSE_2.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\httptools-0.8.0\LICENSE_2.txt
 --------------------------------------------------------------------------------
 The MIT License
 
@@ -8461,7 +8447,7 @@ THE SOFTWARE.
 [L-f6fa51e9cc3f] LICENSE-Python-Embedded.txt
 SHA256: f6fa51e9cc3f0a1ffad26fadc951585b6d0235677e5766ecc2de1aa4ef7ebac5
 Components: Python Embedded
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\python-embedded-3.12.x\LICENSE-Python-Embedded.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\python-embedded-3.12.x\LICENSE-Python-Embedded.txt
 --------------------------------------------------------------------------------
 A. HISTORY OF THE SOFTWARE
 ==========================
@@ -9167,10 +9153,25 @@ docs/license.html_lib.
 
 ================================================================================
 
+[L-f9aa24d322c0] NOTICE-Audion-Launcher.md
+SHA256: f9aa24d322c0d39ff478dbcd0b3df9fa5514a44419e33fde66421029ec02a985
+Components: Audion launcher
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\audion-launcher-bundled\NOTICE-Audion-Launcher.md
+--------------------------------------------------------------------------------
+# Собственный лаунчер Audion
+
+## Start.exe
+
+Крошечная программа запуска, написанная для сборок Audion: находит рядом с
+собой точку входа проекта и передаёт ей управление. Стороннего кода не
+содержит, лежит в корне большинства проектов флота.
+
+================================================================================
+
 [L-fcff87c3a47c] LICENCE_1.txt
 SHA256: fcff87c3a47ce8028a8512aa182d4fcf0ad1c90544ee75cf9b343684cac194de
 Components: tqdm
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\tqdm-4.70.0\LICENCE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\tqdm-4.70.1\LICENCE_1.txt
 --------------------------------------------------------------------------------
 `tqdm` is a product of collaborative work.
 Unless otherwise stated, all authors (see commit logs) retain copyright
@@ -9227,7 +9228,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 [L-fdbe26ef1b61] LICENSE_1.txt
 SHA256: fdbe26ef1b61f1c72d38dbd71af8b42a334e3c58bca9775ef78c1d2ed15512d1
 Components: wsproto
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\wsproto-1.3.2\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\wsproto-1.3.2\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -9256,7 +9257,7 @@ THE SOFTWARE.
 [L-fdcb59154c74] LICENSE_1md
 SHA256: fdcb59154c74cbaba16a11242f7740bea9f23d6feb5547917d8c5f94a80392a5
 Components: httpcore
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\httpcore-1.0.9\LICENSE_1md
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\httpcore-1.0.9\LICENSE_1md
 --------------------------------------------------------------------------------
 Copyright © 2020, [Encode OSS Ltd](https://www.encode.io/).
 All rights reserved.
@@ -9291,7 +9292,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 [L-fe1049884b1a] LICENSE_1.txt
 SHA256: fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d
 Components: annotated-types
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\annotated-types-0.8.0\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\annotated-types-0.8.0\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 
@@ -9320,7 +9321,7 @@ SOFTWARE.
 [L-fff170779a6a] LICENSE_1.txt
 SHA256: fff170779a6acbf65abdb405c087f1cee1786691e4a96a4034517e4a504a0cdf
 Components: annotated-doc
-Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260904T022538Z_audion-chrome-portable_41bc8e49\collector_legal_files\annotated-doc-0.0.5\LICENSE_1.txt
+Captured from: S:\TOOLS\Audion Build Licenses\workspace\runs\20260918T025257Z_audion-chrome-portable_c6aabc8c\collector_legal_files\annotated-doc-0.0.5\LICENSE_1.txt
 --------------------------------------------------------------------------------
 The MIT License (MIT)
 

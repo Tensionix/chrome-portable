@@ -8,14 +8,14 @@
   <a href="https://github.com/Tensionix/chrome-portable/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/Tensionix/chrome-portable?style=flat-square&color=5fd08a&logo=apache&logoColor=white&cacheSeconds=3600"></a>
 </p>
 
-**Version 1.0.2** · 2026-09-18 · 4.2 MB
+**Version 1.0.2** · 2026-09-20 · 83.0 MB
 
-- [Direct download](https://dl.audion.dev/chrome-portable/1.0.2/Audion_Chrome_Portable_v1.0.2.zip) — unmetered, no rate limits
+- [Direct download](https://audion.dev/get/chrome-portable/1.0.2/Audion_Chrome_Portable_v1.0.2_Full.zip) — unmetered, no rate limits
 - [Project page](https://audion.dev/downloads/chrome-portable) — every version and how to install
 
 <p align="center"><img src="docs/screenshot.png" alt="The program window" width="560"></p>
 
-`SHA-256: 26a5d40bb1dae907007ec6f4f3068b05b01d18e469e9f4a305c94b0c59162163`
+`SHA-256: 2f8dd008560130e86b7a3f73cded7c94ee6326bcb5b6cd914f0aaf3b287ea67c`
 
 ---
 
@@ -33,6 +33,8 @@ An **Audion** tool, published by [Tensionix](https://github.com/Tensionix).
 - [Chrome++](#chrome)
 - [Next](#next)
 - [Technical Reference](#technical-reference)
+  - [The Window](#the-window)
+  - [Updating](#updating)
 
 Builds a portable Google Chrome, keeps it updated, keeps Chrome++ current, and
 places the Russian state root certificates into the build.
